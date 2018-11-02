@@ -1,0 +1,90 @@
+.section_2 {
+    position: relative;
+    padding: size(250) size(350);
+    background: #ffffff;
+    max-width: none;
+    width: size(1940);
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    &__title {
+        position: relative;
+        max-width: size(430);
+        color: $color_darkgreen;
+        text-transform: uppercase;
+        margin-bottom: size(50);
+        &:after {
+            content: "";
+            position: absolute;
+            top: -70px;
+            left: -60px;
+            width: 117px;
+            height: 117px;
+            background: transparent url("/images/section_2/title_decor.png")
+                center / cover no-repeat;
+            animation: rotate 10s infinite linear;
+        }
+    }
+    &__paragraph {
+        max-width: size(615);
+        letter-spacing: size(1.44);
+        margin-bottom: size(110);
+    }
+    &__decor {
+        width: size(530);
+        height: size(130);
+        background: transparent url("/images/section_2/decor.png") center center /
+            cover no-repeat;
+    }
+    &__right-side {
+        position: absolute;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        right: size(-175);
+        bottom: 0;
+        z-index: 2;
+        .description {
+            position: absolute;
+            right: size(-80);
+            left: 0;
+            top: size(250);
+            margin: auto;
+            display: block;
+            color: #2f9946;
+            font-family: Montserrat;
+            font-size: size(18);
+            font-weight: 700;
+            line-height: size(24);
+            /* Text style for "В, ысвобож" */
+            letter-spacing: size(0.78);
+            &--top {
+                max-width: size(195);
+            }
+            &--bottom {
+                max-width: size(130);
+                top: size(400);
+            }
+        }
+        .image-man {
+            margin-right: size(45);
+            width: size(450);
+            height: size(800);
+            background: transparent url("/images/section_2/man.png") center /
+                cover no-repeat;
+        }
+        .image-woman {
+            width: size(460);
+            height: size(740);
+            background: transparent url("/images/section_2/woman.png") center /
+                cover no-repeat;
+            z-index: 3;
+        }
+    }
+    &__footer {
+        display: none;
+    }
+}

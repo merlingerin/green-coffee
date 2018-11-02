@@ -1,0 +1,38 @@
+//bootstrap
+// @import "general/bootstrap/bootstrap";
+//misc settings
+@import "config/_variables";
+@import "config/_mixins";
+
+//frameworks
+
+//global things
+@import "general/_normalize";
+@import "general/_reset";
+
+@import "helpers/_common";
+@import "helpers/_grid";
+@import "helpers/_text";
+@import "helpers/_buttons";
+@import "helpers/_icons";
+
+@import "config/_settings";
+
+@import "layout/_main";
+
+//layout
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_modal";
+
+//sections
+@import "pages/section_1";
+@import "pages/section_2";
+@import "pages/section_3";
+@import "pages/section_4";
+@import "pages/section_5";
+@import "pages/section_6";
+
+//media
+@import "media/768.scss";
+@import "media/320.scss";

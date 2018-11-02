@@ -1,0 +1,101 @@
+.section_4 {
+    &.swiper-slide {
+        width: auto;
+    }
+    max-width: none;
+    position: relative;
+    background: #ffffff;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    &__left-side {
+        padding: size(350) size(150) 0 size(350);
+    }
+    &__title {
+        position: relative;
+        max-width: size(430);
+        color: $color_darkgreen;
+        text-transform: uppercase;
+        margin-bottom: size(150);
+        &:after {
+            content: "";
+            position: absolute;
+            top: -70px;
+            left: -60px;
+            width: 117px;
+            height: 117px;
+            background: transparent url("/images/section_2/title_decor.png")
+                center / cover no-repeat;
+            animation: rotate 10s infinite linear;
+        }
+    }
+    &__decor {
+        width: size(530);
+        height: size(130);
+        background: transparent url("/images/section_2/decor.png") center center /
+            cover no-repeat;
+    }
+    .title-stroke {
+        display: block;
+    }
+    .cards-set {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        height: 100%;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            height: 100vh;
+            width: 1px;
+            background-color: #eeeeee;
+        }
+    }
+    .card-content {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        width: size(450);
+        max-width: size(450);
+        height: 100%;
+        max-height: 200px;
+        margin: auto 0 size(250) 0;
+        &__card-title {
+            padding: 0 size(70) size(10) size(70);
+        }
+        &__card-number {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            width: size(48);
+            height: size(48);
+            background-color: $color_darkgreen;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 800;
+            letter-spacing: 1.44px;
+        }
+        &__card-arrow {
+            margin-top: auto;
+            padding: 0 size(70);
+            color: $color_darkgreen;
+            font-size: size(36);
+            // cursor: pointer;
+            &:before {
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,186 @@
+@media only screen and (device-width: 1024px), only screen and (max-width: 1024px) {
+    .button--green {
+        max-width: sizeTb(156);
+        max-height: sizeTb(38);
+    }
+    .header {
+        padding: sizeTb(70) sizeTb(20) 0 sizeTb(35);
+        .facebook-link,
+        .tel-number {
+            display: none;
+        }
+        .button__to-order {
+            margin-right: 5%;
+        }
+        .logo {
+            width: sizeTb(290);
+            &__link {
+                width: sizeTb(170);
+                height: sizeTb(32);
+            }
+            &__text {
+                margin-left: 20%;
+                font-size: sizeTb(16);
+            }
+        }
+    }
+    .section_1 {
+        width: 100vw;
+        .hero {
+            flex: 0 1 100%;
+            max-width: 100%;
+            padding: 30% 14%;
+            background-position: right top;
+        }
+        .sidebar {
+            flex: 1 1 100%;
+            max-width: 100%;
+            flex-flow: row wrap;
+            .card {
+                padding: 0;
+                .card__number {
+                    font-size: sizeTb(22);
+                }
+            }
+        }
+        .image--bottle {
+            top: 25%;
+            max-width: sizeTb(240);
+            max-height: sizeTb(450);
+            right: sizeTb(-240/2);
+        }
+    }
+    .section_2 {
+        width: sizeTb(1200);
+        padding: 2.5% 0 0 2%;
+        &__paragraph {
+            padding-right: 5%;
+        }
+        &__left-side {
+            max-width: 45%;
+        }
+        &__right-side {
+            right: size(-125);
+            .description {
+                font-size: sizeTb(18);
+                line-height: sizeTb(24);
+            }
+            .image-man {
+                width: sizeTb(350);
+                height: sizeTb(650);
+                background: transparent url('/images/section_2/man.png') bottom center/cover no-repeat;
+            }
+            .image-woman {
+                width: sizeTb(350);
+                height: sizeTb(600);
+                background: transparent url('/images/section_2/woman.png') bottom center/cover no-repeat;
+            }
+        }
+    }
+    .sidebar--green {
+        width: sizeTb(290);
+    }
+    .section_3 {
+        width: size(768);
+
+        background: rgba(0, 0, 0, 0.9) url('/images/section_3/bg-768.png') center bottom / cover no-repeat;
+        .hero {
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 38% 0 0 14%;
+            max-width: 100%;
+            .hero__brand-text {
+                font-size: sizeTb(22);
+                letter-spacing: 1.38px;
+                margin-bottom: 5%;
+            }
+            .hero__title {
+                max-width: 70%;
+                text-transform: uppercase;
+                /* Text style for "Контроль" */
+                letter-spacing: 2.28px;
+                margin-bottom: 15%;
+            }
+        }
+        .button__to-order {
+            max-width: sizeTb(320);
+            max-height: sizeTb(75);
+            line-height: sizeTb(24);
+            font-size: sizeTb(18);
+            padding: sizeTb(26) sizeTb(100);
+            margin-top: 0;
+        }
+    }
+    .section_4 {
+        &__left-side {
+            padding: 12% 0 0 10%;
+        }
+        &__title {
+            position: relative;
+            max-width: sizeTb(430);
+            color: $color_darkgreen;
+            text-transform: uppercase;
+            margin-bottom: sizeTb(150);
+            &:after {
+                content: '';
+                position: absolute;
+                top: sizeTb(-25);
+                left: sizeTb(-50);
+                width: sizeTb(100);
+                height: sizeTb(100);
+                background: transparent url('/images/section_2/title_decor.png') center / cover no-repeat;
+                animation: rotate 10s infinite linear;
+            }
+        }
+        &__decor {
+            width: sizeTb(530);
+            height: sizeTb(130);
+            background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
+        }
+        .card-content {
+            width: sizeTb(450);
+            max-width: sizeTb(450);
+            height: sizeTb(210);
+            margin: auto 0 sizeTb(250) 0;
+            &__card-title {
+                padding: 0 sizeTb(70) sizeTb(10) sizeTb(70);
+            }
+            &__card-number {
+                width: sizeTb(48);
+                height: sizeTb(48);
+                letter-spacing: 1.04px;
+            }
+            &__card-arrow {
+                padding: 0 sizeTb(70);
+                font-size: sizeTb(36);
+            }
+        }
+    }
+    .section_6 {
+        padding: 2% 1%;
+        box-sizing: content-box;
+        .logo {
+            margin-bottom: sizeTb(80);
+            &__text {
+                font-size: sizeTb(18);
+            }
+            &__link {
+                width: sizeTb(240);
+                margin-bottom: sizeTb(20);
+            }
+        }
+        .contacts {
+            &__item {
+                margin-bottom: sizeTb(80);
+            }
+            &__title {
+                padding-bottom: sizeTb(26);
+                letter-spacing: 1.28px;
+            }
+            &__description {
+                letter-spacing: 1.08px;
+            }
+        }
+    }
+}

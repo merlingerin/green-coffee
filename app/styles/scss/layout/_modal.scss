@@ -1,0 +1,64 @@
+.jBox-container {
+    width: 100%;
+    height: 100%;
+    max-width: 635px;
+    max-height: 438px;
+    background-color: #fff;
+    padding: 7% 14%;
+    border-radius: 0;
+    .jBox-title {
+        background-color: #fff;
+        border: none;
+        color: #000;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 28px;
+        letter-spacing: 1.5px;
+    }
+    .modal__content form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        input {
+            flex: 1 1 100%;
+            padding: 15px 20px;
+            border: 1px solid #838383;
+            color: #838383;
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            outline: none;
+            &#input-name {
+                margin-bottom: 15px;
+            }
+            &#input-tel {
+                margin-bottom: 45px;
+            }
+            &:focus {
+                outline: none;
+                border-bottom: 3px solid $color_darkgreen;
+            }
+            &::placeholder {
+                color: #838383;
+            }
+        }
+        input[type="submit"] {
+            outline: none;
+            border: none;
+            background-color: $color_darkgreen;
+            color: #ffffff;
+        }
+    }
+}
+
+.jBox-overlay .jBox-closeButton svg {
+    width: 48px;
+    height: 48px;
+    margin-top: 0;
+    margin-right: 0;
+}
+.jBox-overlay .jBox-closeButton path,
+.jBox-overlay .jBox-closeButton:active path {
+    fill: $color_green;
+}

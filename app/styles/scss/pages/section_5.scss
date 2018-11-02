@@ -1,0 +1,74 @@
+.section_5 {
+    // width: 100vw;
+    max-width: none;
+    width: size(1940);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9) url("/images/section_5/bg.png") left top /
+        cover no-repeat;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        height: 100%;
+        position: relative;
+    }
+    .hero {
+        flex: 0 1 70%;
+        height: 100%;
+        padding: size(216) 0 size(170) size(170);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        color: #ffffff;
+        &__title {
+            position: relative;
+            max-width: 78%;
+            // max-width: size(130);
+            color: $color_black;
+            text-transform: uppercase;
+            margin-bottom: size(50);
+            text-transform: uppercase;
+            /* Text style for "Контроль" */
+            letter-spacing: 3.72px;
+            &:after {
+                content: "";
+                position: absolute;
+                top: size(-25);
+                left: size(-50);
+                width: size(100);
+                height: size(100);
+                background: transparent url("/images/section_2/title_decor.png")
+                    center / cover no-repeat;
+                animation: rotate 10s infinite linear;
+            }
+        }
+        .hero__brand-text {
+            // padding-top: size(30);
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: size(28);
+            font-weight: 700;
+            text-transform: uppercase;
+            /* Text style for "Green Coff" */
+            letter-spacing: 1.68px;
+        }
+    }
+    .button-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: size(70);
+        .button--transparent {
+            margin-left: size(80);
+        }
+    }
+    .button__to-order {
+        max-width: size(320);
+        max-height: size(75);
+        line-height: size(24);
+        font-size: size(18);
+        padding: size(26) size(100);
+    }
+}

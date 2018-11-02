@@ -1,0 +1,77 @@
+.section_1 {
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        height: 100%;
+        position: relative;
+    }
+    max-width: none;
+    width: size(1940);
+    height: 100vh;
+    background: $color_darkgreen;
+    .hero {
+        flex: 0 1 77%;
+        max-width: 77%;
+        height: 100%;
+        padding: 0 14%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.6) url("/images/section_1/section_bg.png")
+            left top / cover no-repeat;
+        .hero__title {
+            max-width: 100%;
+            color: #ffffff;
+            text-transform: uppercase;
+            /* Text style for "Контроль" */
+            letter-spacing: 3.72px;
+        }
+    }
+    .sidebar {
+        max-width: 23%;
+        flex: 1 1 23%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        color: #ffffff;
+        .card {
+            .card__number {
+                font-size: size(28);
+                font-weight: 800;
+                position: relative;
+                margin-bottom: 7%;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    max-width: size(24);
+                    border-bottom: size(4) solid #fff;
+                }
+            }
+            padding-left: 10%;
+            padding-bottom: 9%;
+            max-width: 230px;
+            &--1 {
+                max-width: 220px;
+            }
+        }
+    }
+    .image--bottle {
+        width: 100%;
+        height: 100%;
+        max-width: size(384);
+        max-height: size(580);
+        z-index: 1253;
+        position: absolute;
+        top: 2%;
+        right: size(-384/2);
+        bottom: 0;
+        display: inline-block;
+        margin: auto;
+        background: transparent url("/images/section_1/bottle.png") top center /
+            contain no-repeat;
+    }
+}

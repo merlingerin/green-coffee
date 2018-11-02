@@ -1,0 +1,115 @@
+.button--green {
+    /* Style for "заказать" */
+    max-width: size(156);
+    max-height: size(38);
+    padding: 0 size(42);
+    background-color: $color_darkgreen;
+    color: #ffffff;
+    font-family: $Montserrat;
+    font-size: size(11);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Text style for "заказать" */
+    letter-spacing: 0.96px;
+}
+.button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    &__text {
+        color: $color_fff;
+        z-index: 5;
+        position: relative;
+        transition: all 0.2s ease;
+    }
+}
+.button--green {
+    /* Style for "заказать" */
+    position: relative;
+    max-width: size(156);
+    max-height: size(38);
+    padding: 0 size(42);
+    border: 3px solid $color_darkgreen;
+    background-color: $color_darkgreen;
+    overflow: hidden;
+    color: #ffffff;
+    font-family: $Montserrat;
+    font-size: size(11);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Text style for "заказать" */
+    letter-spacing: 0.96px;
+    transition: all 0.2s ease-in-out;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(-120%);
+        background-color: $color_fff;
+        transition: all 0.3s ease-in-out;
+    }
+    &:active {
+        outline: none;
+        font-style: normal;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+        font-style: none;
+        text-decoration: none;
+    }
+    &:hover {
+        &:after {
+            transform: translateX(0%);
+        }
+        .button__text {
+            color: $color_darkgreen;
+        }
+        // color: $color_darkgreen;
+        // border: 3px solid $color_darkgreen;
+        // background-color: #ffffff;
+        // text-decoration: none;
+    }
+}
+
+.button--transparent {
+    /* Style for "заказать" */
+    position: relative;
+    max-height: size(38);
+    background-color: transparent;
+    color: $color_darkgreen;
+    font-family: $Montserrat;
+    font-size: size(18);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* Text style for "заказать" */
+    letter-spacing: 0.96px;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        background-color: $color_darkgreen;
+        transition: transform 0.2s ease-in-out;
+    }
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.button__to-order {
+    font-size: size(11);
+    line-height: size(18);
+}

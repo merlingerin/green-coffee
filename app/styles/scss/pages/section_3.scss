@@ -1,0 +1,50 @@
+.section_3 {
+    // width: 100vw;
+    max-width: none;
+    width: size(1940);
+    height: 100vh;
+    background: $color_darkgreen;
+    background: rgba(0, 0, 0, 0.6) url("/images/section_3/bg.png") left top /
+        cover no-repeat;
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        height: 100%;
+        position: relative;
+    }
+    .hero {
+        flex: 0 1 size(1110);
+        max-width: 57%;
+        height: 100%;
+        padding: size(256) size(270);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        color: #ffffff;
+        .hero__brand-text {
+            // padding-top: size(30);
+            color: #ffffff;
+            font-family: Montserrat;
+            font-size: size(28);
+            font-weight: 700;
+            text-transform: uppercase;
+            /* Text style for "Green Coff" */
+            letter-spacing: 1.68px;
+        }
+        .hero__title {
+            max-width: 100%;
+            text-transform: uppercase;
+            /* Text style for "Контроль" */
+            letter-spacing: 3.72px;
+        }
+    }
+    .button__to-order {
+        max-width: size(320);
+        max-height: size(75);
+        line-height: size(24);
+        font-size: size(18);
+        padding: size(26) size(100);
+        margin-top: size(70);
+    }
+}

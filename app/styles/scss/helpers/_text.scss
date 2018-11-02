@@ -1,0 +1,322 @@
+.text__black {
+    color: $color_black;
+}
+.text__green {
+    color: $color_darkgreen;
+}
+@media screen and (max-width: $lgs), only screen and (device-width: $lgs) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: 62px;
+        line-height: 72px;
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 68px;
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+@media screen and (max-width: $mds), only screen and (device-width: $mds) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width: $tablet),
+    only screen and (device-width: $tablet) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: 42px;
+        line-height: 52px;
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: 42px;
+        line-height: 52px;
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width: $mobile),
+    only screen and (device-width: $mobile) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+// .text__black {
+//     color: $color_black;
+// }
+// .text__green {
+//     color: $color_darkgreen;
+// }
+
+// @media screen and (max-width: $mobile),
+//     only screen and (device-width: $mobile) {
+//     .title_1 {
+//         font-family: $Montserrat;
+//         font-weight: 900;
+//         font-size: size(24);
+//         line-height: size(32);
+//     }
+//     .title_2 {
+//         font-family: $Montserrat;
+//         font-weight: 800;
+//         font-size: size(20);
+//         line-height: size(16);
+//     }
+//     .title_3 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(16);
+//         line-height: size(20);
+//     }
+//     .paragraph_1 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(16);
+//         line-height: size(20);
+//     }
+//     .paragraph_2 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(14);
+//         line-height: size(18);
+//     }
+//     .paragraph_3 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(14);
+//         line-height: size(22);
+//     }
+// }
+// @media screen and (max-width: $tablet),
+//     only screen and (device-width: $tablet) {
+//     .title_1 {
+//         font-family: $Montserrat;
+//         font-weight: 900;
+//         font-size: sizeTb(42);
+//         line-height: sizeTb(52);
+//     }
+//     .title_2 {
+//         font-family: $Montserrat;
+//         font-weight: 800;
+//         font-size: sizeTb(42);
+//         line-height: sizeTb(52);
+//     }
+//     .title_3 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: sizeTb(22);
+//         line-height: sizeTb(28);
+//     }
+//     .paragraph_1 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: sizeTb(24);
+//         line-height: sizeTb(34);
+//     }
+//     .paragraph_2 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: sizeTb(18);
+//         line-height: sizeTb(24);
+//     }
+//     .paragraph_3 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: sizeTb(16);
+//         line-height: sizeTb(22);
+//     }
+// }
+// @media screen and (max-width: $mds), only screen and (device-width: $mds) {
+//     .title_1 {
+//         font-family: $Montserrat;
+//         font-weight: 900;
+//         font-size: size(48);
+//         line-height: size(58);
+//     }
+//     .title_2 {
+//         font-family: $Montserrat;
+//         font-weight: 800;
+//         font-size: size(38);
+//         line-height: size(48);
+//     }
+//     .title_3 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(22);
+//         line-height: size(28);
+//     }
+//     .paragraph_1 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(24);
+//         line-height: size(34);
+//     }
+//     .paragraph_2 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(18);
+//         line-height: size(24);
+//     }
+//     .paragraph_3 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(16);
+//         line-height: size(22);
+//     }
+// }
+// @media screen and (max-width: $lgs), only screen and (device-width: $lgs) {
+//     .title_1 {
+//         font-family: $Montserrat;
+//         font-weight: 900;
+//         font-size: size(62);
+//         line-height: size(72);
+//     }
+//     .title_2 {
+//         font-family: $Montserrat;
+//         font-weight: 800;
+//         font-size: size(56);
+//         line-height: size(68);
+//     }
+//     .title_3 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(28);
+//         line-height: size(34);
+//     }
+//     .paragraph_1 {
+//         font-family: $Montserrat;
+//         font-weight: 700;
+//         font-size: size(24);
+//         line-height: size(34);
+//     }
+//     .paragraph_2 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(18);
+//         line-height: size(24);
+//     }
+//     .paragraph_3 {
+//         font-family: $Montserrat;
+//         font-weight: 500;
+//         font-size: size(16);
+//         line-height: size(16);
+//     }
+// }

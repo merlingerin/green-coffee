@@ -1,0 +1,23 @@
+@function size($size) {
+    @return ($size / 940 * 100vh);
+}
+@function sizeTb($size) {
+    @return ($size / 1024 * 100vh);
+}
+
+html * {
+    box-sizing: border-box;
+}
+.swiper-container {
+    height: 100vh;
+}
+
+a,
+i {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container {
+    height: 100%;
+}

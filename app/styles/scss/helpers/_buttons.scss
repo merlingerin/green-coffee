@@ -1,12 +1,10 @@
 .button--green {
     /* Style for "заказать" */
-    max-width: size(156);
-    max-height: size(38);
-    padding: 0 size(42);
+    padding: 0 size(45);
     background-color: $color_darkgreen;
     color: #ffffff;
     font-family: $Montserrat;
-    font-size: size(11);
+    font-size: size(12);
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
@@ -28,7 +26,6 @@
 .button--green {
     /* Style for "заказать" */
     position: relative;
-    max-width: size(156);
     max-height: size(38);
     padding: 0 size(42);
     border: 3px solid $color_darkgreen;
@@ -44,7 +41,7 @@
     letter-spacing: 0.96px;
     transition: all 0.2s ease-in-out;
     &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -92,7 +89,7 @@
     /* Text style for "заказать" */
     letter-spacing: 0.96px;
     &:after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: -5px;
         left: 0;

@@ -23,19 +23,13 @@
         align-items: center;
         color: #ffffff;
         .hero__brand-text {
-            // padding-top: size(30);
             color: #ffffff;
-            font-family: Montserrat;
-            font-size: size(28);
-            font-weight: 700;
             text-transform: uppercase;
-            /* Text style for "Green Coff" */
             letter-spacing: 1.68px;
         }
         .hero__title {
             max-width: 100%;
             text-transform: uppercase;
-            /* Text style for "Контроль" */
             letter-spacing: 3.72px;
         }
     }

@@ -2,6 +2,9 @@
     @return ($size / 940 * 100vh);
 }
 @function sizeTb($size) {
+    @return ($size / 660 * 100vh);
+}
+@function sizeMb($size) {
     @return ($size / 1024 * 100vh);
 }
 

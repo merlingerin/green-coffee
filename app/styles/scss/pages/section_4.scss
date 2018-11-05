@@ -90,6 +90,7 @@
         &__card-title {
             position: relative;
             padding: 0 size(70) size(10) size(70);
+            text-transform: uppercase;
         }
         &__card-number {
             display: flex;
@@ -112,6 +113,8 @@
             padding: 0 size(70) 0 size(70);
             opacity: 0;
             transition: all 1s ease-in-out;
+            color: #707070;
+            line-height: 22px;
         }
         &__card-arrow {
             margin-top: auto;

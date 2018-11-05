@@ -2,17 +2,62 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
+    color: $color_white;
     &__link {
         position: relative;
         display: inline-block;
-        background: transparent url("/images/logo/logo.png") center/100%
-            no-repeat;
+        background: transparent url('/images/logo/logo.png') center/100% no-repeat;
         width: size(260);
         height: size(48);
     }
     &__text {
         margin-left: size(86);
         font-size: size(18);
+    }
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    // right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 5% 0 0 5%;
+    overflow: hidden;
+    touch-action: manipulation;
+    background-color: $color_darkgreen;
+    z-index: 99;
+    // display: none;
+    // transform: translateX(-100%);
+    &__header {
+        position: relative;
+        flex: 1 1 100%;
+    }
+    &__close-button {
+        position: absolute;
+        top: 0;
+        right: 15%;
+        bottom: 0;
+        font-size: 32px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    &__list {
+        list-style: none;
+        .list__item {
+            margin-bottom: 3%;
+        }
+        a {
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+    }
+    &__content {
+        margin: 0 auto;
     }
 }
 .header {
@@ -54,24 +99,23 @@
             text-transform: uppercase;
         }
     }
-    .menu {
+    .menu-button {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
         max-height: size(38);
         cursor: pointer;
-        .menu__text {
+        .menu-button__text {
             margin-right: size(25);
             font-size: size(12);
             text-transform: uppercase;
         }
-        .menu__icon {
+        .menu-button__icon {
             display: inline-block;
             width: size(26);
             height: size(20);
-            background: transparent url("/images/burger/burger.png")
-                center/cover no-repeat;
+            background: transparent url('/images/burger/burger.png') center/cover no-repeat;
         }
     }
 }

@@ -2,6 +2,7 @@
     width: size(430);
     height: 100%;
     background-color: $color_darkgreen;
+    z-index: 1;
 }
 .swiper-slide {
     max-width: 100vw;
@@ -51,7 +52,13 @@
 }
 
 #section-map {
-    max-width: size(1060);
+    max-width: 767px;
+    width: 100%;
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
 }
 
 @keyframes rotate {

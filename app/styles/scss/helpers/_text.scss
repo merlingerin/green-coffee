@@ -80,8 +80,7 @@
         line-height: 22px;
     }
 }
-@media screen and (max-width: $tablet),
-    only screen and (device-width: $tablet) {
+@media screen and (max-width: $tablet), only screen and (device-width: $tablet) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;
@@ -119,8 +118,7 @@
         line-height: 22px;
     }
 }
-@media screen and (max-width: $mobile),
-    only screen and (device-width: $mobile) {
+@media screen and (max-width: $mobile), only screen and (device-width: $mobile) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;

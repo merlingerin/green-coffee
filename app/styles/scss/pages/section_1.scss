@@ -6,9 +6,10 @@
         position: relative;
     }
     max-width: none;
-    width: size(1940);
+    width: 100vw;
     height: 100vh;
     background: $color_darkgreen;
+    z-index: 3;
     .hero {
         flex: 0 1 77%;
         max-width: 77%;
@@ -18,8 +19,7 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        background: rgba(0, 0, 0, 0.6) url("/images/section_1/section_bg.png")
-            left top / cover no-repeat;
+        background: rgba(0, 0, 0, 0.6) url('/images/section_1/section_bg.png') left top / cover no-repeat;
         .hero__title {
             max-width: 100%;
             color: #ffffff;
@@ -37,18 +37,20 @@
         color: #ffffff;
         .card {
             .card__number {
-                font-size: size(28);
-                font-weight: 800;
+                // font-size: size(28);
+                // font-weight: 800;
+                @extend .paragraph_1;
+                display: inline-block;
                 position: relative;
                 margin-bottom: 7%;
                 &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     bottom: 0;
                     left: 0;
                     width: 100%;
-                    max-width: size(24);
-                    border-bottom: size(4) solid #fff;
+                    max-width: 100%;
+                    border-bottom: 3px solid #fff;
                 }
             }
             padding-left: 10%;
@@ -71,7 +73,6 @@
         bottom: 0;
         display: inline-block;
         margin: auto;
-        background: transparent url("/images/section_1/bottle.png") top center /
-            contain no-repeat;
+        background: transparent url('/images/section_1/bottle.png') top center / contain no-repeat;
     }
 }

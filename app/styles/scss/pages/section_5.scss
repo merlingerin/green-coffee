@@ -3,8 +3,7 @@
     max-width: none;
     width: size(1940);
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9) url("/images/section_5/bg.png") left top /
-        cover no-repeat;
+    background: rgba(0, 0, 0, 0.9) url('/images/section_5/bg.png') left top / cover no-repeat;
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -31,17 +30,6 @@
             text-transform: uppercase;
             /* Text style for "Контроль" */
             letter-spacing: 3.72px;
-            &:after {
-                content: "";
-                position: absolute;
-                top: size(-25);
-                left: size(-50);
-                width: size(100);
-                height: size(100);
-                background: transparent url("/images/section_2/title_decor.png")
-                    center / cover no-repeat;
-                animation: rotate 10s infinite linear;
-            }
         }
         .hero__brand-text {
             // padding-top: size(30);

@@ -21,3 +21,33 @@ i {
 .container {
     height: 100%;
 }
+
+@mixin decor-rotated() {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: -60px;
+    width: 117px;
+    height: 117px;
+    background: transparent url(/images/section_2/title_decor.png) center/cover no-repeat;
+    -webkit-animation: rotate 10s infinite linear;
+    animation: rotate 10s infinite linear;
+}
+
+@mixin decor-rotated--mobile {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 70px;
+    height: 70px;
+    background: transparent url(/images/section_2/title_decor.png) center/cover no-repeat;
+    -webkit-animation: rotate 10s infinite linear;
+    animation: rotate 10s infinite linear;
+}
+
+.text-decor {
+    &--rotated:after {
+        @include decor-rotated();
+    }
+}

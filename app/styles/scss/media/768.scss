@@ -1,4 +1,4 @@
-@media only screen and (device-width: 1024px), only screen and (max-width: 1024px) {
+@media only screen and (device-width: $tablet), only screen and (max-width: $tablet) {
     .button--green {
         max-width: sizeTb(156);
         max-height: sizeTb(38);
@@ -15,8 +15,8 @@
         .logo {
             width: sizeTb(290);
             &__link {
-                width: sizeTb(170);
-                height: sizeTb(32);
+                width: sizeTb(180);
+                height: sizeTb(42);
             }
             &__text {
                 margin-left: 20%;
@@ -27,15 +27,19 @@
     .section_1 {
         width: 100vw;
         .hero {
+            height: auto;
             flex: 0 1 100%;
             max-width: 100%;
-            padding: 30% 14%;
+            padding: 17% 0 10% 5%;
             background-position: right top;
         }
         .sidebar {
+            padding: 0% 2%;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
             flex: 1 1 100%;
             max-width: 100%;
-            flex-flow: row wrap;
             .card {
                 padding: 0;
                 .card__number {
@@ -114,7 +118,7 @@
     }
     .section_4 {
         &__left-side {
-            padding: 12% 0 0 10%;
+            padding: size(400) size(200) 0 size(300);
         }
         &__title {
             position: relative;
@@ -122,16 +126,16 @@
             color: $color_darkgreen;
             text-transform: uppercase;
             margin-bottom: sizeTb(150);
-            &:after {
-                content: '';
-                position: absolute;
-                top: sizeTb(-25);
-                left: sizeTb(-50);
-                width: sizeTb(100);
-                height: sizeTb(100);
-                background: transparent url('/images/section_2/title_decor.png') center / cover no-repeat;
-                animation: rotate 10s infinite linear;
-            }
+            // &:after {
+            //     content: '';
+            //     position: absolute;
+            //     top: sizeTb(-25);
+            //     left: sizeTb(-50);
+            //     width: sizeTb(100);
+            //     height: sizeTb(100);
+            //     background: transparent url('/images/section_2/title_decor.png') center / cover no-repeat;
+            //     animation: rotate 10s infinite linear;
+            // }
         }
         &__decor {
             width: sizeTb(530);
@@ -139,10 +143,11 @@
             background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
         }
         .card-content {
-            width: sizeTb(450);
-            max-width: sizeTb(450);
-            height: sizeTb(210);
-            margin: auto 0 sizeTb(250) 0;
+            // width: 450px;
+            // max-width: sizeTb(450);
+            // height: sizeTb(210);
+            // margin: auto 0 sizeTb(250) 0;
+            // margin: auto;
             &__card-title {
                 padding: 0 sizeTb(70) sizeTb(10) sizeTb(70);
             }
@@ -167,6 +172,7 @@
             }
             &__link {
                 width: sizeTb(240);
+                max-width: 200px;
                 margin-bottom: sizeTb(20);
             }
         }

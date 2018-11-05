@@ -1,4 +1,9 @@
-@media only screen and (device-width: 767px), only screen and (max-width: 767px) {
+@media only screen and (device-width: $mobile), only screen and (max-width: $mobile) {
+    .text-decor {
+        &--rotated:after {
+            @include decor-rotated--mobile;
+        }
+    }
     .swiper-slide {
         height: auto;
     }
@@ -12,11 +17,11 @@
                 display: none;
             }
         }
-        .menu {
-            .menu__text {
+        .menu-button {
+            .menu-button__text {
                 font-size: 12px;
             }
-            .menu__icon {
+            .menu-button__icon {
                 width: 20px;
                 height: 20px;
             }
@@ -29,6 +34,7 @@
             display: none;
         }
         .hero {
+            padding: 40% 0 16% 14%;
             .hero__title {
                 letter-spacing: 1.2px;
             }
@@ -70,12 +76,6 @@
         &__title {
             max-width: 70%;
             margin-bottom: 8%;
-            &:after {
-                width: 60px;
-                height: 60px;
-                left: -35px;
-                top: -35px;
-            }
         }
         &__paragraph {
             max-width: none;
@@ -155,6 +155,9 @@
     }
     .section_4 {
         width: 100%;
+        &__left-side {
+            padding: 28% 0 19% 12%;
+        }
         &__title {
             margin-bottom: 10%;
         }
@@ -165,6 +168,18 @@
             min-height: 135px;
             margin: 0;
             border-top: 1px solid $color_darkgreen;
+            padding-bottom: 15%;
+            &__image {
+                display: none;
+            }
+            &:hover {
+                .card-content {
+                    transform: translateY(0%);
+                    &__card-arrow {
+                        opacity: 0;
+                    }
+                }
+            }
         }
         .card-content {
             position: relative;
@@ -173,6 +188,7 @@
             height: auto;
             margin: 0;
             text-transform: uppercase;
+            transform: translateY(0%);
             &__card-title {
                 margin-top: 3%;
                 max-width: 80%;
@@ -190,6 +206,8 @@
                 margin: auto;
                 max-height: 46px;
                 font-size: 32px;
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out;
             }
         }
     }
@@ -225,7 +243,7 @@
     }
     .section_6 {
         width: 100%;
-        padding: 9vh 0 0 6vh;
+        padding: 9vh 0 6vh 6vh;
         text-align: left;
         .logo__text {
             font-size: 16px;
@@ -233,7 +251,7 @@
     }
 }
 
-@media only screen and (device-width: 767px) and (orientation: landscape), only screen and (max-width: 767px) and (orientation: landscape) {
+@media only screen and (device-width: $mobile) and (orientation: landscape), only screen and (max-width: $mobile) and (orientation: landscape) {
     .section_1 {
         .hero {
             padding: 17% 10%;
@@ -246,12 +264,7 @@
         &__left-side {
             padding: 11.5% 0 0 9%;
         }
-        &__title:after {
-            width: 60px;
-            height: 60px;
-            left: -35px;
-            top: -35px;
-        }
+
         &__decor {
             width: 100%;
             height: 100%;
@@ -291,18 +304,12 @@
     .section_4 {
         &__left-side {
             width: 100%;
-            margin-bottom: 5%;
+            padding: 13% 0 6% 8%;
         }
         &__title {
             width: 100%;
             max-width: none;
             margin-bottom: 5%;
-            &:after {
-                width: 60px;
-                height: 60px;
-                left: -35px;
-                top: -35px;
-            }
         }
         .card-content {
             padding-bottom: 5%;
@@ -314,16 +321,14 @@
                 height: 7vw;
             }
         }
+        .card__image {
+            display: none;
+        }
     }
     .section_5 {
         .hero {
             padding: 10% 0 10% 0;
-            &__title:after {
-                width: 60px;
-                height: 60px;
-                left: -35px;
-                top: -35px;
-            }
+
             .button__to-order {
                 max-width: 50%;
                 line-height: 42px;

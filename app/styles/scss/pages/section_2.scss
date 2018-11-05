@@ -1,9 +1,17 @@
+.section_2.swiper-slide-active {
+    .section_2__title {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 .section_2 {
     position: relative;
     padding: size(250) size(350);
     background: #ffffff;
     max-width: none;
     width: size(1940);
+    z-index: 2;
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -15,17 +23,9 @@
         color: $color_darkgreen;
         text-transform: uppercase;
         margin-bottom: size(50);
-        &:after {
-            content: "";
-            position: absolute;
-            top: -70px;
-            left: -60px;
-            width: 117px;
-            height: 117px;
-            background: transparent url("/images/section_2/title_decor.png")
-                center / cover no-repeat;
-            animation: rotate 10s infinite linear;
-        }
+        transform: translateX(100px);
+        opacity: 0;
+        transition: all 0.5s linear;
     }
     &__paragraph {
         max-width: size(615);
@@ -35,8 +35,7 @@
     &__decor {
         width: size(530);
         height: size(130);
-        background: transparent url("/images/section_2/decor.png") center center /
-            cover no-repeat;
+        background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
     }
     &__right-side {
         position: absolute;
@@ -73,14 +72,12 @@
             margin-right: size(45);
             width: size(450);
             height: size(800);
-            background: transparent url("/images/section_2/man.png") center /
-                cover no-repeat;
+            background: transparent url('/images/section_2/man.png') center / cover no-repeat;
         }
         .image-woman {
             width: size(460);
             height: size(740);
-            background: transparent url("/images/section_2/woman.png") center /
-                cover no-repeat;
+            background: transparent url('/images/section_2/woman.png') center / cover no-repeat;
             z-index: 3;
         }
     }

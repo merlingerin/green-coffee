@@ -4,8 +4,8 @@
     width: size(1940);
     height: 100vh;
     background: $color_darkgreen;
-    background: rgba(0, 0, 0, 0.6) url("/images/section_3/bg.png") left top /
-        cover no-repeat;
+    background: rgba(0, 0, 0, 0.6) url('/images/section_3/bg.png') left top / cover no-repeat;
+    z-index: 1;
     .container {
         display: flex;
         flex-flow: row wrap;

@@ -10,7 +10,14 @@ $('ready', () => {
 
         menuAn.to(menuEl, 1, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
         openMenu.addEventListener('click', function() {
-            menuAn.to(menuEl, 1, { xPercent: 0, ease: SlowMo.ease.config(0.4, 0.6, false) });
+            const that = $(this);
+            if (that.hasClass('active')) {
+                that.removeClass('active');
+                return menuAn.to(menuEl, 1, { xPercent: -100, ease: Expo.easeOut });
+            }
+            that.addClass('active');
+
+            return menuAn.to(menuEl, 1, { xPercent: 0, ease: Expo.easeOut });
         });
 
         closeMenu.addEventListener('click', function() {

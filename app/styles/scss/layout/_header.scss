@@ -30,7 +30,7 @@
     overflow: hidden;
     touch-action: manipulation;
     background-color: $color_darkgreen;
-    z-index: 99;
+    z-index: 99999999;
     // display: none;
     // transform: translateX(-100%);
     &__header {
@@ -106,6 +106,60 @@
         align-items: center;
         max-height: size(38);
         cursor: pointer;
+        .burger-button {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            padding: 0 15px;
+            border-radius: 50%;
+            background-color: $color_darkgreen;
+            cursor: pointer;
+            &__item {
+                width: 12px;
+                height: 4px;
+                background-color: #fff;
+                opacity: 1;
+                transition: all 0.3s ease-in;
+                &:nth-child(even) {
+                    transform: translateX(-50%);
+                }
+                &:nth-child(odd) {
+                    transform: translateX(50%);
+                }
+            }
+            &:hover {
+                .burger-button__item {
+                    &:nth-child(even) {
+                        transform: translateX(-20%);
+                    }
+                    &:nth-child(odd) {
+                        transform: translateX(20%);
+                    }
+                }
+            }
+        }
+        &.active {
+            .burger-button {
+                z-index: 9999999;
+                position: relative;
+                .burger-button__item {
+                    opacity: 0;
+                    &:nth-child(2) {
+                        // position: absolute;
+                        opacity: 1;
+                        transform: translate3d(0%, 100%, 0) scale(1.5) rotateZ(45deg);
+                    }
+                    &:nth-child(3) {
+                        // position: absolute;
+                        opacity: 1;
+                        transform: translate3d(0%, 0%, 0) scale(1.5) rotateZ(-45deg);
+                    }
+                }
+            }
+        }
         .menu-button__text {
             margin-right: size(25);
             font-size: size(12);

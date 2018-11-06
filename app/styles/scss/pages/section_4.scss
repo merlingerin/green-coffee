@@ -23,7 +23,7 @@
     &__decor {
         width: size(530);
         height: size(130);
-        background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
+        background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
     }
     .title-stroke {
         display: block;
@@ -39,7 +39,7 @@
         height: 100%;
         overflow: hidden;
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             bottom: 0;
@@ -117,7 +117,7 @@
             line-height: 22px;
         }
         &__card-arrow {
-            margin-top: auto;
+            // margin-top: auto;
             padding: 0 size(70);
             color: $color_darkgreen;
             font-size: size(36);

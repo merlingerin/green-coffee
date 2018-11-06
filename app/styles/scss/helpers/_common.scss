@@ -25,8 +25,13 @@ i {
     height: 100%;
 }
 
+.ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
 @mixin decor-rotated() {
-    content: '';
+    content: "";
     position: absolute;
     top: -70px;
     left: -60px;
@@ -38,7 +43,7 @@ i {
 }
 
 @mixin decor-rotated--mobile {
-    content: '';
+    content: "";
     position: absolute;
     top: -25px;
     left: -30px;

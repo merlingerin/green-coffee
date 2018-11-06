@@ -19,13 +19,24 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        background: rgba(0, 0, 0, 0.6) url('/images/section_1/section_bg.png') left top / cover no-repeat;
+        background: rgba(0, 0, 0, 0.6) url("/images/section_1/section_bg.png") left top / cover no-repeat;
         .hero__title {
             max-width: 100%;
             color: #ffffff;
             text-transform: uppercase;
             /* Text style for "Контроль" */
             letter-spacing: 3.72px;
+            // transform: translateX(100%);
+            // opacity: 0;
+            .new {
+                overflow: hidden;
+                font-style: normal;
+            }
+            .ml12 {
+                right: -300px;
+                position: relative;
+                opacity: 0;
+            }
         }
     }
     .sidebar {
@@ -44,7 +55,7 @@
                 position: relative;
                 margin-bottom: 7%;
                 &:after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -73,6 +84,6 @@
         bottom: 0;
         display: inline-block;
         margin: auto;
-        background: transparent url('/images/section_1/bottle.png') top center / contain no-repeat;
+        background: transparent url("/images/section_1/bottle.png") top center / contain no-repeat;
     }
 }

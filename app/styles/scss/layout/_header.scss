@@ -6,7 +6,7 @@
     &__link {
         position: relative;
         display: inline-block;
-        background: transparent url('/images/logo/logo.png') center/100% no-repeat;
+        background: transparent url("/images/logo/logo.png") center/100% no-repeat;
         width: size(260);
         height: size(48);
     }
@@ -143,7 +143,7 @@
         }
         &.active {
             .burger-button {
-                z-index: 9999999;
+                z-index: 999999999999;
                 position: relative;
                 .burger-button__item {
                     opacity: 0;
@@ -169,7 +169,7 @@
             display: inline-block;
             width: size(26);
             height: size(20);
-            background: transparent url('/images/burger/burger.png') center/cover no-repeat;
+            background: transparent url("/images/burger/burger.png") center/cover no-repeat;
         }
     }
 }

@@ -1,9 +1,9 @@
-.section_2.swiper-slide-active {
-    .section_2__title {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
+// .section_2.swiper-slide-active {
+//     .section_2__title {
+//         opacity: 1;
+//         transform: translateX(0px);
+//     }
+// }
 
 .section_2 {
     position: relative;
@@ -23,8 +23,8 @@
         color: $color_darkgreen;
         text-transform: uppercase;
         margin-bottom: size(50);
-        transform: translateX(100px);
-        opacity: 0;
+        // transform: translateX(100px);
+        // opacity: 0;
         transition: all 0.5s linear;
     }
     &__paragraph {
@@ -35,7 +35,7 @@
     &__decor {
         width: size(530);
         height: size(130);
-        background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
+        background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
     }
     &__right-side {
         position: absolute;
@@ -72,12 +72,12 @@
             margin-right: size(45);
             width: size(450);
             height: size(800);
-            background: transparent url('/images/section_2/man.png') center / cover no-repeat;
+            background: transparent url("/images/section_2/man.png") center / cover no-repeat;
         }
         .image-woman {
             width: size(460);
             height: size(740);
-            background: transparent url('/images/section_2/woman.png') center / cover no-repeat;
+            background: transparent url("/images/section_2/woman.png") center / cover no-repeat;
             z-index: 3;
         }
     }

@@ -1,10 +1,10 @@
 .section_3 {
     // width: 100vw;
     max-width: none;
-    width: size(1940);
+    width: size(2240);
     height: 100vh;
-    background: $color_darkgreen;
-    background: rgba(0, 0, 0, 0.6) url('/images/section_3/bg.png') left top / cover no-repeat;
+    background: #000000;
+    // background: rgba(0, 0, 0, 0.6) url("/images/section_3/bg.png") left top / cover no-repeat;
     z-index: 1;
     .container {
         display: flex;
@@ -12,9 +12,14 @@
         height: 100%;
         position: relative;
     }
+    .sidebar--green {
+        flex: 0 1 18%;
+    }
     .hero {
-        flex: 0 1 size(1110);
-        max-width: 57%;
+        background: rgba(0, 0, 0, 0.6) url(/images/section_3/bg.png) left top/cover no-repeat;
+        // flex: 0 1 size(1640);
+        flex: 0 1 82%;
+        // max-width: size(1940);
         height: 100%;
         padding: size(256) size(270);
         display: flex;

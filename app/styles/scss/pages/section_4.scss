@@ -21,7 +21,8 @@
         margin-bottom: size(150);
     }
     &__decor {
-        width: size(530);
+        // width: size(530);
+        width: 100%;
         height: size(130);
         background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
     }

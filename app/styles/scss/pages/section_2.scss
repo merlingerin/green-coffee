@@ -35,7 +35,7 @@
     &__decor {
         width: size(530);
         height: size(130);
-        background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
+        background: transparent url("/images/materials/logo_icon.svg") center center / cover no-repeat;
     }
     &__right-side {
         position: absolute;
@@ -43,14 +43,15 @@
         flex-flow: row wrap;
         align-items: flex-end;
         justify-content: space-between;
-        right: size(-175);
+        right: -11%;
         bottom: 0;
         z-index: 2;
         .description {
             position: absolute;
-            right: size(-80);
+            // right: size(-80);
+            right: -4%;
             left: 0;
-            top: size(250);
+            top: 25%;
             margin: auto;
             display: block;
             color: #2f9946;
@@ -65,20 +66,84 @@
             }
             &--bottom {
                 max-width: size(130);
-                top: size(400);
+                top: 45%;
             }
         }
         .image-man {
+            position: relative;
             margin-right: size(45);
             width: size(450);
-            height: size(800);
-            background: transparent url("/images/section_2/man.png") center / cover no-repeat;
+            height: size(740);
+            background: transparent url("/images/section_2/man.png") center / contain no-repeat;
+            &:after {
+                content: "";
+                width: 50%;
+                background-color: #0b3118;
+                height: 1px;
+                position: absolute;
+                bottom: -7%;
+                top: 0;
+                // left: 0%;
+                right: -4%;
+                margin: auto;
+                transform: rotateZ(-45deg);
+                transform-origin: 0 0;
+            }
+            &:before {
+                content: "";
+                width: 50%;
+                background-color: #0b3118;
+                height: 1px;
+                position: absolute;
+                bottom: -45%;
+                top: 0;
+                // left: 0%;
+                right: -4%;
+                margin: auto;
+                transform: rotateZ(-45deg);
+                transform-origin: 0 0;
+            }
+            &:hover {
+                background: transparent url("/images/section_2/man_2.png") center / contain no-repeat;
+            }
         }
         .image-woman {
+            position: relative;
             width: size(460);
-            height: size(740);
-            background: transparent url("/images/section_2/woman.png") center / cover no-repeat;
+            height: size(680);
+            background: transparent url("/images/section_2/woman.png") center / contain no-repeat;
             z-index: 3;
+            &:after {
+                content: "";
+                width: 62%;
+                background-color: #0b3118;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                top: 0;
+                // left: 0%;
+                left: 10%;
+                margin: auto;
+                transform: rotateZ(45deg);
+                transform-origin: 0 0;
+            }
+            &:before {
+                content: "";
+                width: 50%;
+                background-color: #0b3118;
+                height: 1px;
+                position: absolute;
+                bottom: 0%;
+                top: 0;
+                // left: 0%;
+                left: 15%;
+                margin: auto;
+                transform: rotateZ(35deg);
+                transform-origin: 0 0;
+            }
+            &:hover {
+                background: transparent url("/images/section_2/woman_2.png") center / contain no-repeat;
+            }
         }
     }
     &__footer {

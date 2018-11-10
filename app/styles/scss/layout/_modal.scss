@@ -29,6 +29,12 @@
             font-weight: 500;
             position: relative;
             outline: none;
+            &.filled {
+                border-bottom: 3px solid $color_darkgreen;
+            }
+            &.filled:focus {
+                border-bottom-width: 3px;
+            }
             &#input-name {
                 margin-bottom: 15px;
             }
@@ -37,7 +43,7 @@
             }
             &:focus {
                 outline: none;
-                border-bottom: 3px solid $color_darkgreen;
+                border: 1px solid $color_darkgreen;
             }
             &::placeholder {
                 color: #838383;

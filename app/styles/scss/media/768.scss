@@ -69,16 +69,16 @@
                 font-size: sizeTb(18);
                 line-height: sizeTb(24);
             }
-            .image-man {
-                width: sizeTb(350);
-                height: sizeTb(650);
-                background: transparent url('/images/section_2/man.png') bottom center/cover no-repeat;
-            }
-            .image-woman {
-                width: sizeTb(350);
-                height: sizeTb(600);
-                background: transparent url('/images/section_2/woman.png') bottom center/cover no-repeat;
-            }
+            // .image-man {
+            //     width: sizeTb(350);
+            //     height: sizeTb(650);
+            //     background: transparent url('/images/section_2/man.png') bottom center/cover no-repeat;
+            // }
+            // .image-woman {
+            //     width: sizeTb(350);
+            //     height: sizeTb(600);
+            //     background: transparent url('/images/section_2/woman.png') bottom center/cover no-repeat;
+            // }
         }
     }
     .sidebar--green {
@@ -87,7 +87,7 @@
     .section_3 {
         width: size(768);
 
-        background: rgba(0, 0, 0, 0.9) url('/images/section_3/bg-768.png') center bottom / cover no-repeat;
+        background: rgba(0, 0, 0, 0.9) url("/images/section_3/bg-768.png") center bottom / cover no-repeat;
         .hero {
             flex-flow: column wrap;
             justify-content: flex-start;
@@ -140,7 +140,7 @@
         &__decor {
             width: sizeTb(530);
             height: sizeTb(130);
-            background: transparent url('/images/section_2/decor.png') center center / cover no-repeat;
+            background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
         }
         .card-content {
             // width: 450px;

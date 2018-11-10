@@ -11,6 +11,11 @@
 html * {
     box-sizing: border-box;
 }
+
+body {
+    overflow: hidden;
+}
+
 .swiper-container {
     height: 100vh;
 }
@@ -49,15 +54,35 @@ i {
     left: -30px;
     width: 70px;
     height: 70px;
-    background: transparent url(/images/section_2/title_decor.png) center/cover no-repeat;
+    background: transparent url("/images/section_2/title_decor.png") center/cover no-repeat;
     -webkit-animation: rotate 10s infinite linear;
     animation: rotate 10s infinite linear;
 }
-
+.new {
+    overflow: hidden;
+    font-style: normal;
+}
+.ml12 {
+    right: -300px;
+    position: relative;
+    opacity: 0;
+}
+.jBox-overlay .jBox-closeButton svg {
+    display: none;
+}
+.jBox-overlay {
+    cursor: url("/images/Webp.net-resizeimage.png"), auto;
+}
+.swiper-slide-active .text-decor--rotated:after {
+    opacity: 1;
+}
 .text-decor {
     &--rotated {
         &:after {
             @include decor-rotated("/images/materials/txt_round_1.svg");
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+            transition-delay: 1s;
         }
         &.decorator-1:after {
             @include decor-rotated("/images/materials/txt_round_1.svg");

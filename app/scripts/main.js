@@ -1,3 +1,40 @@
+const swiper = new Swiper(".swiper-container", {
+    freeMode: true,
+    setWrapperSize: true,
+    direction: "horizontal",
+    slidesPerView: "auto",
+    simulateTouch: false,
+    resistance: true,
+    resistanceRatio: 0,
+    mousewheel: {
+        sensitivity: 1
+    },
+    breakpoints: {
+        767: {
+            direction: "vertical"
+        }
+    }
+});
+
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener("resize", () => {
+    swiper.update();
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+new jBox("Modal", {
+    attach: ".button__to-order",
+    title: "Заполните форму и мы свяжемся с вами",
+    content:
+        '<div class="modal__content"><form action="#" id="modal-form" method="post"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></form></div>'
+});
+
 $("ready", () => {
     try {
         var decoration = document.getElementById("logo__decoration");

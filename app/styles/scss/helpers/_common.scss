@@ -30,14 +30,14 @@ i {
     line-height: 1em;
 }
 
-@mixin decor-rotated() {
+@mixin decor-rotated($url) {
     content: "";
     position: absolute;
     top: -70px;
     left: -60px;
     width: 117px;
     height: 117px;
-    background: transparent url(/images/section_2/title_decor.png) center/cover no-repeat;
+    background: transparent url($url) center/cover no-repeat;
     -webkit-animation: rotate 10s infinite linear;
     animation: rotate 10s infinite linear;
 }
@@ -55,7 +55,18 @@ i {
 }
 
 .text-decor {
-    &--rotated:after {
-        @include decor-rotated();
+    &--rotated {
+        &:after {
+            @include decor-rotated("/images/materials/txt_round_1.svg");
+        }
+        &.decorator-1:after {
+            @include decor-rotated("/images/materials/txt_round_1.svg");
+        }
+        &.decorator-2:after {
+            @include decor-rotated("/images/materials/txt_round_2.svg");
+        }
+        &.decorator-3:after {
+            @include decor-rotated("/images/materials/txt_round_3.svg");
+        }
     }
 }

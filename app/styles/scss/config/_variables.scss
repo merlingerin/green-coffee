@@ -11,4 +11,37 @@ $mds: 1600px;
 $tablet: 1200px;
 $mobile: 767px;
 // Main texts
-$Montserrat: 'Montserrat';
+$Montserrat: "Montserrat";
+
+$mediaL: screen and
+        (
+            max-width: $lgs
+        ),
+    only screen and
+        (
+            device-width: $lgs
+        );
+$mediaM: screen and
+        (
+            max-width: $mds
+        ),
+    only screen and
+        (
+            device-width: $mds
+        );
+$mediaT: screen and
+        (
+            max-width: $tablet
+        ),
+    only screen and
+        (
+            device-width: $tablet
+        );
+$mediaMb: screen and
+        (
+            max-width: $mobile
+        ),
+    only screen and
+        (
+            device-width: $mobile
+        );

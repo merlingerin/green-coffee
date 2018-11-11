@@ -1,18 +1,26 @@
 $("ready", () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
     var textAnimation = function() {
         const words = $(".swiper-slide-active .ml12");
+        const section = $(".swiper-slide-active");
 
-        if (!words.hasClass("activated")) {
+        if (!section.hasClass("activated")) {
             words.map((key, item) => {
                 $(item).wrap('<span class="new"></span>');
                 TweenLite.to(item, 0.1, { opacity: 1 });
                 TweenLite.to(item, key / 3 + 0.5, { right: 0 });
             });
-            words.addClass("activated");
+            section.addClass("activated");
         }
     };
 
-    const swiper = new Swiper(".swiper-container", {
+    const winWidth = window.innerWidth;
+    const winHeight = window.innerHeight;
+    const aspectRation = winWidth / winHeight;
+
+    window.mySwiper = new Swiper(".swiper-container", {
         freeMode: true,
         setWrapperSize: true,
         direction: "horizontal",
@@ -30,27 +38,38 @@ $("ready", () => {
         }
     });
 
-    swiper.on("slideChange", function() {
+    window.mySwiper.on("slideChange", function() {
         setTimeout(() => {
             textAnimation();
         }, 500);
+        mySwiper.update();
     });
-    swiper.on("slideNextTransitionStart", function() {
-        console.log("Hey");
-    });
-
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
 
     // We listen to the resize event
     window.addEventListener("resize", () => {
-        swiper.update();
+        window.mySwiper.update();
         // We execute the same script as before
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
+        setTimeout(() => {
+            window.mySwiper.update();
+            window.mySwiper.update();
+            window.mySwiper.update();
+        }, 1000);
+    });
+    window.addEventListener("orientationchange", () => {
+        window.mySwiper.update();
+
+        setTimeout(() => {
+            const currentWinWidth = window.innerWidth;
+
+            if ((winWidth >= 768 && currentWinWidth < 768) || (winWidth < 768 && currentWinWidth >= 768)) {
+                window.location.reload();
+            }
+            window.mySwiper.update();
+            window.mySwiper.update();
+            window.mySwiper.update();
+        }, 1000);
     });
 
     new jBox("Modal", {
@@ -64,12 +83,17 @@ $("ready", () => {
             inputName.add(inputTel).on("input", e => {
                 const target = e.target;
                 const value = target && target.value;
-                console.log("value", value);
+
                 if (value && value.length > 0) {
                     return $(target).addClass("filled");
                 }
                 return $(target).removeClass("filled");
             });
+        },
+        onClose: function() {
+            if (window.mySwiper) {
+                mySwiper.update();
+            }
         }
     });
 
@@ -101,6 +125,21 @@ $("ready", () => {
             menuAn.to(menuEl, 1, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
         });
 
+        /**
+        |--------------------------------------------------
+        | MENU LOGIC
+        |--------------------------------------------------
+        */
+        const menuItems = $(".menu__list li");
+        menuItems.on("click", event => {
+            const target = event.currentTarget;
+            $(openMenu).removeClass("active");
+            var index = $(target).index() === 0 ? $(target).index() : $(target).index() + 1;
+            mySwiper.slideTo(index, 500);
+            mySwiper.update();
+        });
+        // ============================================================
+
         // var tl = new TimelineMax({ repeat: 30, repeatDelay: 1 });
         var tl = new TimelineMax();
         var tpreloader = new TimelineMax();
@@ -126,4 +165,58 @@ $("ready", () => {
         }
     }
     // ============================================================
+
+    /**
+    |--------------------------------------------------
+    | CARD ANIMATION
+    |--------------------------------------------------
+    */
+    const card = $(".card");
+
+    if (winWidth < 768) {
+        card.on("click", event => {
+            const target = $(event.currentTarget);
+            $(".card.active")
+                .not(target)
+                .removeClass("active");
+
+            if (!target.hasClass("active")) {
+                const elem = $(event.currentTarget).children(".card__image");
+                const image = elem.children("img");
+                const imageWidth = image.width();
+                TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
+                target.addClass("active");
+                mySwiper.update();
+            } else {
+                const elem = $(event.currentTarget).children(".card__image");
+
+                TweenLite.to(elem, 0.5, { width: `0px` });
+                target.removeClass("active");
+                mySwiper.update();
+            }
+        });
+    } else {
+        card.on("mouseenter", event => {
+            const target = $(event.currentTarget);
+
+            if (!target.hasClass("active")) {
+                const elem = $(event.currentTarget).children(".card__image");
+                const image = elem.children("img");
+                const imageWidth = image.width();
+
+                TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
+                target.addClass("active");
+                mySwiper.update();
+            }
+        });
+
+        card.on("mouseleave", event => {
+            const target = $(event.currentTarget);
+            target.removeClass("active");
+            const elem = $(event.currentTarget).children(".card__image");
+
+            TweenLite.to(elem, 0.5, { width: `0px` });
+            mySwiper.update();
+        });
+    }
 });

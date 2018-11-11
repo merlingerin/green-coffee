@@ -10,7 +10,31 @@
     height: 100vh;
     background: $color_darkgreen;
     z-index: 3;
+    .scroll-page {
+        position: absolute;
+        bottom: 15%;
+        font-family: "Proxima Nova";
+        font-weight: 300;
+        color: #ffffff;
+        .scroll-text,
+        .scroll-icon {
+            display: inline-block;
+        }
+        .scroll-icon {
+            display: flex;
+            flex-flow: row wrap;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            fill: #fff;
+            right: 0;
+            transform: translateX(120%);
+        }
+        @extend .note;
+    }
     .hero {
+        position: relative;
         flex: 0 1 77%;
         max-width: 77%;
         height: 100%;
@@ -20,6 +44,7 @@
         justify-content: flex-start;
         align-items: center;
         background: rgba(0, 0, 0, 0.6) url("/images/section_1/section_bg.png") left top / cover no-repeat;
+        z-index: 0;
         .hero__title {
             max-width: 100%;
             color: #ffffff;
@@ -37,6 +62,7 @@
         flex-flow: column wrap;
         justify-content: center;
         color: #ffffff;
+        padding-top: 15vh;
         .card {
             .card__number {
                 // font-size: size(28);
@@ -57,7 +83,7 @@
             }
             padding-left: 10%;
             padding-bottom: 9%;
-            max-width: 230px;
+            max-width: 245px;
             &--1 {
                 max-width: 220px;
             }
@@ -70,11 +96,12 @@
         max-height: size(500);
         z-index: 1253;
         position: absolute;
-        top: 0;
+        top: 15vh;
         right: size(-384/2);
         bottom: 0;
         display: inline-block;
         margin: auto;
         background: transparent url("/images/section_1/bottle.png") top center / contain no-repeat;
+        z-index: 1;
     }
 }

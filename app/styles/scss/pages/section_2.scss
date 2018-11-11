@@ -48,18 +48,12 @@
         z-index: 2;
         .description {
             position: absolute;
-            // right: size(-80);
             right: -4%;
             left: 0;
             top: 25%;
             margin: auto;
             display: block;
             color: #2f9946;
-            font-family: Montserrat;
-            font-size: size(18);
-            font-weight: 700;
-            line-height: size(24);
-            /* Text style for "В, ысвобож" */
             letter-spacing: size(0.78);
             &--top {
                 max-width: size(195);
@@ -75,8 +69,26 @@
             width: size(450);
             height: size(740);
             background: transparent url("/images/section_2/man.png") center / contain no-repeat;
-            &:after {
+            &:before {
                 content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: transparent url("/images/section_2/man_2.png") center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            &:hover:before {
+                opacity: 1;
+                animation: blame 1.5s infinite ease-in-out;
+            }
+            .text-line {
                 width: 50%;
                 background-color: #0b3118;
                 height: 1px;
@@ -88,23 +100,22 @@
                 margin: auto;
                 transform: rotateZ(-45deg);
                 transform-origin: 0 0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: size(16);
+                    height: size(16);
+                    border-radius: 51%;
+                    background-color: #0b3118;
+                }
             }
-            &:before {
-                content: "";
-                width: 50%;
-                background-color: #0b3118;
-                height: 1px;
-                position: absolute;
+            .text-line-2 {
                 bottom: -45%;
-                top: 0;
-                // left: 0%;
-                right: -4%;
-                margin: auto;
                 transform: rotateZ(-45deg);
                 transform-origin: 0 0;
-            }
-            &:hover {
-                background: transparent url("/images/section_2/man_2.png") center / contain no-repeat;
             }
         }
         .image-woman {
@@ -113,8 +124,26 @@
             height: size(680);
             background: transparent url("/images/section_2/woman.png") center / contain no-repeat;
             z-index: 3;
-            &:after {
+            &:before {
                 content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: transparent url("/images/section_2/woman_2.png") center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            &:hover:before {
+                opacity: 1;
+                animation: blame 1.5s infinite ease-in-out;
+            }
+            .text-line {
                 width: 62%;
                 background-color: #0b3118;
                 height: 1px;
@@ -126,27 +155,50 @@
                 margin: auto;
                 transform: rotateZ(45deg);
                 transform-origin: 0 0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: size(16);
+                    height: size(16);
+                    border-radius: 51%;
+                    background-color: #0b3118;
+                }
             }
-            &:before {
-                content: "";
+            .text-line-2 {
                 width: 50%;
-                background-color: #0b3118;
-                height: 1px;
-                position: absolute;
                 bottom: 0%;
-                top: 0;
-                // left: 0%;
                 left: 15%;
-                margin: auto;
                 transform: rotateZ(35deg);
                 transform-origin: 0 0;
-            }
-            &:hover {
-                background: transparent url("/images/section_2/woman_2.png") center / contain no-repeat;
             }
         }
     }
     &__footer {
         display: none;
+    }
+}
+
+.touch {
+    .section_2 {
+        .image-man:before,
+        .image-woman:before {
+            opacity: 1;
+            animation: blame 1.5s infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes blame {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

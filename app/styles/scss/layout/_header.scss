@@ -3,6 +3,7 @@
     flex-flow: column wrap;
     justify-content: flex-start;
     color: $color_white;
+    flex: 1 1 auto;
     &__link {
         position: relative;
         display: inline-block;
@@ -72,13 +73,13 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: size(70) size(295) 0 14%;
+    padding: size(70) 13% 0 14%;
     // padding: 2.5% 15% 0 14%;
     color: $color_white;
-
+    z-index: 2;
     .button__to-order {
         margin-left: auto;
-        margin-right: size(100);
+        margin-right: 7%;
     }
     .facebook-link {
         display: flex;
@@ -118,7 +119,7 @@
             height: 45px;
             padding: 0 15px;
             border-radius: 50%;
-            background-color: $color_darkgreen;
+            // background-color: $color_darkgreen;
             cursor: pointer;
             &__item {
                 width: 12px;

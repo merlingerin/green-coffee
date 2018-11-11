@@ -39,21 +39,71 @@
         font-family: $Montserrat;
         font-weight: 500;
         font-size: size(16);
-        line-height: size(16);
+        line-height: size(22);
+    }
+    .note {
+        font-family: $Montserrat;
+        font-size: size(18);
+        font-weight: 700;
+        line-height: size(25);
     }
 }
 @media screen and (max-width: $mds), only screen and (device-width: $mds) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;
-        font-size: sizeTb(48);
-        line-height: sizeTb(58);
+        font-size: sizeMb(48);
+        line-height: sizeMb(58);
     }
     .title_2 {
         font-family: $Montserrat;
         font-weight: 800;
-        font-size: sizeTb(38);
-        line-height: sizeTb(48);
+        font-size: sizeMb(38);
+        line-height: sizeMb(48);
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: sizeMb(22);
+        line-height: sizeMb(28);
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: sizeMb(24);
+        line-height: sizeMb(34);
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: sizeMb(18);
+        line-height: sizeMb(24);
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: sizeMb(16);
+        line-height: sizeMb(22);
+    }
+    .note {
+        font-family: $Montserrat;
+        font-size: sizeMb(14);
+        font-weight: 700;
+        line-height: sizeMb(18);
+    }
+}
+@media screen and (max-width: $tablet), only screen and (device-width: $tablet) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: sizeTb(42);
+        line-height: sizeTb(52);
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: sizeTb(42);
+        line-height: sizeTb(52);
     }
     .title_3 {
         font-family: $Montserrat;
@@ -79,81 +129,100 @@
         font-size: sizeTb(16);
         line-height: sizeTb(22);
     }
-}
-@media screen and (max-width: $tablet), only screen and (device-width: $tablet) {
-    .title_1 {
+    .note {
         font-family: $Montserrat;
-        font-weight: 900;
-        font-size: 42px;
-        line-height: 52px;
-    }
-    .title_2 {
-        font-family: $Montserrat;
-        font-weight: 800;
-        font-size: 42px;
-        line-height: 52px;
-    }
-    .title_3 {
-        font-family: $Montserrat;
+        font-size: sizeTb(18);
         font-weight: 700;
-        font-size: 22px;
-        line-height: 28px;
-    }
-    .paragraph_1 {
-        font-family: $Montserrat;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 34px;
-    }
-    .paragraph_2 {
-        font-family: $Montserrat;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .paragraph_3 {
-        font-family: $Montserrat;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 22px;
+        line-height: sizeTb(24);
     }
 }
 @media screen and (max-width: $mobile), only screen and (device-width: $mobile) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;
-        font-size: 24px;
-        line-height: 32px;
+        font-size: sizeMob(24);
+        line-height: sizeMob(32);
     }
     .title_2 {
         font-family: $Montserrat;
         font-weight: 800;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: sizeMob(20);
+        line-height: sizeMob(24);
     }
     .title_3 {
         font-family: $Montserrat;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: sizeMob(16);
+        line-height: sizeMob(20);
     }
     .paragraph_1 {
         font-family: $Montserrat;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
+        font-weight: 700;
+        font-size: sizeMob(16);
+        line-height: sizeMob(20);
     }
     .paragraph_2 {
         font-family: $Montserrat;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: sizeMob(14);
+        line-height: sizeMob(18);
     }
     .paragraph_3 {
         font-family: $Montserrat;
         font-weight: 500;
-        font-size: 14px;
-        line-height: 22px;
+        font-size: sizeMob(14);
+        line-height: sizeMob(22);
+    }
+    .note {
+        font-family: $Montserrat;
+        font-size: sizeMob(12);
+        font-weight: 700;
+        line-height: sizeMob(14);
+    }
+}
+@media only screen and (device-width: $mobile) and (orientation: landscape),
+    only screen and (max-width: $mobile) and (orientation: landscape) {
+    .title_1 {
+        font-family: $Montserrat;
+        font-weight: 900;
+        font-size: sizeMobL(24);
+        line-height: sizeMobL(32);
+    }
+    .title_2 {
+        font-family: $Montserrat;
+        font-weight: 800;
+        font-size: sizeMobL(20);
+        line-height: sizeMobL(24);
+    }
+    .title_3 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: sizeMobL(16);
+        line-height: sizeMobL(20);
+    }
+    .paragraph_1 {
+        font-family: $Montserrat;
+        font-weight: 700;
+        font-size: sizeMobL(16);
+        line-height: sizeMobL(20);
+    }
+    .paragraph_2 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: sizeMobL(14);
+        line-height: sizeMobL(18);
+    }
+    .paragraph_3 {
+        font-family: $Montserrat;
+        font-weight: 500;
+        font-size: sizeMobL(14);
+        line-height: sizeMobL(22);
+    }
+    .note {
+        font-family: $Montserrat;
+        font-size: sizeMobL(12);
+        font-weight: 700;
+        line-height: sizeMobL(14);
     }
 }
 

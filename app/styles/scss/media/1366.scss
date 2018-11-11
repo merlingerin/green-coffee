@@ -1,5 +1,16 @@
 @media only screen and (max-width: $mds), only screen and (device-width: $mds) {
-    .button--green {
-        /* Style for "заказать" */
+    .section_1 {
+        .hero {
+            flex: 0 1 70%;
+        }
+        .sidebar {
+            max-width: 30%;
+            flex: 1 1 sizeMb(370);
+        }
+    }
+    .section_2 {
+        &__right-side {
+            right: -11%;
+        }
     }
 }

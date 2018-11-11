@@ -1,0 +1,144 @@
+@media only screen and (device-width: $mobile) and (orientation: landscape),
+    only screen and (max-width: $mobile) and (orientation: landscape) {
+    .jBox-container {
+        padding: 0;
+        .jBox-title {
+            font-size: sizeMobL(12);
+        }
+        .modal__content form input {
+            font-size: sizeMobL(10);
+        }
+    }
+    .jBox-container .modal__content form input#input-tel {
+        margin-bottom: sizeMobL(25);
+    }
+    .jBox-overlay,
+    #jBox1 {
+        touch-action: manipulation;
+        // pointer-events: none;
+    }
+
+    .section_1 {
+        .hero {
+            height: 100vh;
+            padding: 17% 10%;
+        }
+        .image--bottle {
+            max-width: 40%;
+        }
+        .sidebar {
+            padding: 7% 0 0 sizeMobL(15);
+            .card {
+                .card__number {
+                    font-size: sizeMobL(14);
+                    &:after {
+                        bottom: sizeMobL(-3);
+                    }
+                }
+            }
+        }
+    }
+    .section_2 {
+        &__left-side {
+            padding: 11.5% 0 0 9%;
+        }
+
+        &__decor {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-position: left top;
+        }
+        &__paragraph {
+            max-width: 60%;
+        }
+        .section_2__right-side {
+            margin-top: -3%;
+            .image-man {
+                width: 50%;
+                height: sizeMobL(230);
+                margin-right: 0;
+                background-size: contain;
+                // background-position: right bottom;
+            }
+            .image-woman {
+                width: 45%;
+                height: sizeMobL(210);
+                background-size: contain;
+                // background-position: left bottom;
+            }
+        }
+        &__footer {
+            .footer__description {
+                font-size: sizeMobL(12);
+            }
+        }
+    }
+    .section_3 {
+        .hero {
+            flex: 1 1 100%;
+            padding: 5% 0 10% 5%;
+            .hero__title {
+                margin-bottom: 15%;
+            }
+            .button__to-order {
+                max-width: 50%;
+                line-height: 42px;
+            }
+        }
+    }
+    .section_4 {
+        &__left-side {
+            width: 100%;
+            padding: 13% 0 6% 8%;
+        }
+        &__title {
+            width: 100%;
+            max-width: none;
+            margin-bottom: 5%;
+        }
+        .card {
+            .card-content {
+                padding-bottom: 5%;
+                &__card-description {
+                    padding-left: sizeMobL(40);
+                }
+                &__card-title {
+                    padding: 0 6.83594vh 0 7vw;
+                }
+                &__card-number {
+                    width: 7vw;
+                    height: 7vw;
+                }
+                &__card-arrow {
+                    top: 7vw;
+                }
+            }
+        }
+        .card__image {
+            display: none;
+        }
+    }
+    .section_5 {
+        .hero {
+            padding: 10% 0 10% 0;
+
+            .button__to-order {
+                max-width: 50%;
+                line-height: 42px;
+            }
+            .button--transparent {
+                flex: 1 1 100%;
+                margin: 5% auto auto;
+            }
+        }
+    }
+    .section_6 {
+        .logo {
+            &__link {
+                width: 60vh;
+                height: 14vh;
+            }
+        }
+    }
+}

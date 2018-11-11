@@ -1,7 +1,7 @@
 .section_3 {
     // width: 100vw;
     max-width: none;
-    width: size(2240);
+    width: size(2280);
     height: 100vh;
     background: #000000;
     // background: rgba(0, 0, 0, 0.6) url("/images/section_3/bg.png") left top / cover no-repeat;
@@ -21,18 +21,21 @@
         flex: 0 1 82%;
         // max-width: size(1940);
         height: 100%;
-        padding: size(256) size(270);
+        padding: size(256) 0 0 size(270);
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         color: #ffffff;
         .hero__brand-text {
+            width: 100%;
+            margin-bottom: size(30);
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 1.68px;
         }
         .hero__title {
+            width: 100%;
             max-width: 100%;
             text-transform: uppercase;
             letter-spacing: 3.72px;

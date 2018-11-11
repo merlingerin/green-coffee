@@ -13,13 +13,13 @@
             margin-right: 5%;
         }
         .logo {
-            width: sizeTb(290);
+            // width: sizeTb(290);
             &__link {
                 width: sizeTb(180);
                 height: sizeTb(42);
             }
             &__text {
-                margin-left: 20%;
+                margin-left: 6vh;
                 font-size: sizeTb(16);
             }
         }
@@ -30,18 +30,20 @@
             height: auto;
             flex: 0 1 100%;
             max-width: 100%;
-            padding: 17% 0 10% 5%;
+            padding: 23% 0 10% 5%;
             background-position: right top;
         }
         .sidebar {
             padding: 0% 2%;
             flex-flow: row wrap;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             flex: 1 1 100%;
             max-width: 100%;
             .card {
                 padding: 0;
+                max-width: sizeTb(210);
+                transform: translateY(sizeTb(80));
                 .card__number {
                     font-size: sizeTb(22);
                 }
@@ -55,54 +57,56 @@
         }
     }
     .section_2 {
-        width: sizeTb(1200);
-        padding: 2.5% 0 0 2%;
+        width: sizeTb(1500);
+        padding-left: sizeTb(200);
         &__paragraph {
-            padding-right: 5%;
+            max-width: sizeTb(420);
         }
-        &__left-side {
-            max-width: 45%;
+        .image-man {
+            width: sizeTb(400);
+            height: sizeTb(680);
+            margin-right: sizeTb(120);
+        }
+        .image-woman {
+            width: sizeTb(400);
+            height: sizeTb(640);
         }
         &__right-side {
-            right: size(-125);
             .description {
-                font-size: sizeTb(18);
-                line-height: sizeTb(24);
+                top: 20%;
+                letter-spacing: sizeTn(0.78);
+                &--top {
+                    max-width: sizeTn(195);
+                }
+                &--bottom {
+                    max-width: sizeTn(130);
+                    top: 40%;
+                }
             }
-            // .image-man {
-            //     width: sizeTb(350);
-            //     height: sizeTb(650);
-            //     background: transparent url('/images/section_2/man.png') bottom center/cover no-repeat;
-            // }
-            // .image-woman {
-            //     width: sizeTb(350);
-            //     height: sizeTb(600);
-            //     background: transparent url('/images/section_2/woman.png') bottom center/cover no-repeat;
-            // }
         }
     }
     .sidebar--green {
         width: sizeTb(290);
     }
     .section_3 {
-        width: size(768);
+        width: auto;
 
-        background: rgba(0, 0, 0, 0.9) url("/images/section_3/bg-768.png") center bottom / cover no-repeat;
+        // background: rgba(0, 0, 0, 0.9) url("/images/section_3/bg-768.png") center bottom / cover no-repeat;
         .hero {
             flex-flow: column wrap;
             justify-content: flex-start;
             align-items: flex-start;
-            padding: 38% 0 0 14%;
-            max-width: 100%;
+            max-width: none;
+            width: 100vw;
+            padding: sizeTb(350) 0 0 sizeTb(90);
+            background-position: right center;
             .hero__brand-text {
-                font-size: sizeTb(22);
                 letter-spacing: 1.38px;
                 margin-bottom: 5%;
             }
             .hero__title {
                 max-width: 70%;
                 text-transform: uppercase;
-                /* Text style for "Контроль" */
                 letter-spacing: 2.28px;
                 margin-bottom: 15%;
             }
@@ -118,7 +122,7 @@
     }
     .section_4 {
         &__left-side {
-            padding: size(400) size(200) 0 size(300);
+            padding: size(400) size(200) 0 size(170);
         }
         &__title {
             position: relative;
@@ -187,6 +191,26 @@
             &__description {
                 letter-spacing: 1.08px;
             }
+        }
+    }
+}
+
+@media only screen and (device-width: $tablet) and (orientation: landscape),
+    only screen and (max-width: $tablet) and (orientation: landscape) {
+    .jBox-container {
+        padding: 1%;
+        .jBox-title {
+            font-size: sizeTb(22);
+        }
+        .modal__content form input {
+            font-size: sizeTb(18);
+        }
+    }
+    .section_1 .sidebar .card .card__number {
+        font-size: sizeTb(24);
+        &:after {
+            bottom: sizeTb(-4);
+            border-bottom: sizeTb(4) solid #fff;
         }
     }
 }

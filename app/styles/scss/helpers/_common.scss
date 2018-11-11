@@ -1,11 +1,35 @@
 @function size($size) {
     @return ($size / 940 * 100vh);
 }
-@function sizeTb($size) {
-    @return ($size / 660 * 100vh);
-}
 @function sizeMb($size) {
+    @return ($size / 900 * 100vh);
+}
+@function sizeTb($size) {
     @return ($size / 1024 * 100vh);
+}
+@function sizeMob($size) {
+    @return ($size / 560 * 100vh);
+}
+@function sizeMobL($size) {
+    @return ($size / 320 * 100vh);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/ProxymaNova/ProximaNova-Light.eot");
+    src: url("/fonts/ProxymaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/ProxymaNova/ProximaNova-Light.woff") format("woff"), url("/fonts/ProxymaNova/ProximaNova-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/ProxymaNova/ProximaNovaT-Thin.eot");
+    src: url("/fonts/ProxymaNova/ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/ProxymaNova/ProximaNovaT-Thin.woff") format("woff"), url("/fonts/ProxymaNova/ProximaNovaT-Thin.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
 }
 
 html * {
@@ -38,23 +62,23 @@ i {
 @mixin decor-rotated($url) {
     content: "";
     position: absolute;
-    top: -70px;
-    left: -60px;
-    width: 117px;
-    height: 117px;
+    top: size(-70);
+    left: size(-60);
+    width: size(117);
+    height: size(117);
     background: transparent url($url) center/cover no-repeat;
     -webkit-animation: rotate 10s infinite linear;
     animation: rotate 10s infinite linear;
 }
 
-@mixin decor-rotated--mobile {
+@mixin decor-rotated--mobile($url) {
     content: "";
     position: absolute;
-    top: -25px;
-    left: -30px;
-    width: 70px;
-    height: 70px;
-    background: transparent url("/images/section_2/title_decor.png") center/cover no-repeat;
+    top: sizeMob(-30);
+    left: sizeMob(-25);
+    width: sizeMob(60);
+    height: sizeMob(60);
+    background: transparent url($url) center/cover no-repeat;
     -webkit-animation: rotate 10s infinite linear;
     animation: rotate 10s infinite linear;
 }
@@ -67,13 +91,14 @@ i {
     position: relative;
     opacity: 0;
 }
+
 .jBox-overlay .jBox-closeButton svg {
     display: none;
 }
 .jBox-overlay {
     cursor: url("/images/Webp.net-resizeimage.png"), auto;
 }
-.swiper-slide-active .text-decor--rotated:after {
+.swiper-slide.activated .text-decor--rotated:after {
     opacity: 1;
 }
 .text-decor {
@@ -92,6 +117,25 @@ i {
         }
         &.decorator-3:after {
             @include decor-rotated("/images/materials/txt_round_3.svg");
+        }
+    }
+}
+
+@media screen and (max-width: $mobile), only screen and (device-width: $mobile) {
+    .text-decor {
+        &--rotated {
+            &:after {
+                @include decor-rotated--mobile("/images/materials/txt_round_1.svg");
+            }
+            &.decorator-1:after {
+                @include decor-rotated--mobile("/images/materials/txt_round_1.svg");
+            }
+            &.decorator-2:after {
+                @include decor-rotated--mobile("/images/materials/txt_round_2.svg");
+            }
+            &.decorator-3:after {
+                @include decor-rotated--mobile("/images/materials/txt_round_3.svg");
+            }
         }
     }
 }

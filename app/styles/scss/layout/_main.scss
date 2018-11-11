@@ -21,8 +21,6 @@
     transition: opacity 0.3s ease-in-out;
     z-index: 999999;
     display: flex;
-    height: 100%;
-    width: 100%;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
@@ -52,7 +50,7 @@
 }
 
 #section-map {
-    max-width: 767px;
+    max-width: size(767);
     width: 100%;
     img {
         max-width: 100%;

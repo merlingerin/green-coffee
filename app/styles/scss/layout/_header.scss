@@ -7,7 +7,7 @@
     &__link {
         position: relative;
         display: inline-block;
-        background: transparent url("/images/logo/logo.png") center/100% no-repeat;
+        background: transparent url('../images/logo/logo.png') center/100% no-repeat;
         width: size(260);
         height: size(48);
     }
@@ -32,7 +32,7 @@
     padding: 2% 0 0 5%;
     overflow: hidden;
     touch-action: manipulation;
-    background: $color_darkgreen url("/images/materials/logo_icon_for_menu.svg") left center / cover no-repeat;
+    background: $color_darkgreen url('../images/materials/logo_icon_for_menu.svg') left center / cover no-repeat;
     z-index: 99999999;
     // display: none;
     // transform: translateX(-100%);
@@ -173,7 +173,7 @@
             display: inline-block;
             width: size(26);
             height: size(20);
-            background: transparent url("/images/burger/burger.png") center/cover no-repeat;
+            background: transparent url('../images/burger/burger.png') center/cover no-repeat;
         }
     }
 }

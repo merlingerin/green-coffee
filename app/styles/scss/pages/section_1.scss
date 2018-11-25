@@ -13,7 +13,7 @@
     .scroll-page {
         position: absolute;
         bottom: 15%;
-        font-family: "Proxima Nova";
+        font-family: 'Proxima Nova';
         font-weight: 300;
         color: #ffffff;
         .scroll-text,
@@ -43,7 +43,7 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        background: rgba(0, 0, 0, 0.6) url("/images/section_1/section_bg.png") left top / cover no-repeat;
+        background: rgba(0, 0, 0, 1) url('../images/section_1/section_bg.png') left top / cover no-repeat;
         z-index: 0;
         .hero__title {
             max-width: 100%;
@@ -53,6 +53,10 @@
             letter-spacing: 3.72px;
             // transform: translateX(100%);
             // opacity: 0;
+            p {
+                padding-top: 5vh;
+                width: 100%;
+            }
         }
     }
     .sidebar {
@@ -72,7 +76,7 @@
                 position: relative;
                 margin-bottom: 7%;
                 &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -101,7 +105,7 @@
         bottom: 0;
         display: inline-block;
         margin: auto;
-        background: transparent url("/images/section_1/bottle.png") top center / contain no-repeat;
+        background: transparent url('../images/section_1/bottle.png') top center / contain no-repeat;
         z-index: 1;
     }
 }

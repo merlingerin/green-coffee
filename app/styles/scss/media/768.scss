@@ -37,13 +37,12 @@
             padding: 0% 2%;
             flex-flow: row wrap;
             justify-content: space-around;
-            align-items: flex-start;
+            align-items: center;
             flex: 1 1 100%;
             max-width: 100%;
             .card {
                 padding: 0;
                 max-width: sizeTb(210);
-                transform: translateY(sizeTb(80));
                 .card__number {
                     font-size: sizeTb(22);
                 }
@@ -144,7 +143,7 @@
         &__decor {
             width: sizeTb(530);
             height: sizeTb(130);
-            background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
+            background: transparent url('../images/section_2/decor.png') center center / cover no-repeat;
         }
         .card-content {
             // width: 450px;
@@ -195,8 +194,7 @@
     }
 }
 
-@media only screen and (device-width: $tablet) and (orientation: landscape),
-    only screen and (max-width: $tablet) and (orientation: landscape) {
+@media only screen and (device-width: $tablet) and (orientation: landscape), only screen and (max-width: $tablet) and (orientation: landscape) {
     .jBox-container {
         padding: 1%;
         .jBox-title {

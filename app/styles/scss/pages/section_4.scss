@@ -24,7 +24,7 @@
         // width: size(530);
         width: 100%;
         height: size(130);
-        background: transparent url("/images/section_2/decor.png") center center / cover no-repeat;
+        background: transparent url('../images/section_2/decor.png') center center / cover no-repeat;
     }
     .title-stroke {
         display: block;
@@ -40,7 +40,7 @@
         height: 100%;
         overflow: hidden;
         &:after {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             bottom: 0;

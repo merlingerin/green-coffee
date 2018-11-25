@@ -15,19 +15,19 @@
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("/fonts/ProxymaNova/ProximaNova-Light.eot");
-    src: url("/fonts/ProxymaNova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
-        url("/fonts/ProxymaNova/ProximaNova-Light.woff") format("woff"), url("/fonts/ProxymaNova/ProximaNova-Light.ttf") format("truetype");
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProxymaNova/ProximaNova-Light.eot');
+    src: url('../fonts/ProxymaNova/ProximaNova-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/ProxymaNova/ProximaNova-Light.woff') format('woff'),
+        url('../fonts/ProxymaNova/ProximaNova-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Proxima Nova";
-    src: url("/fonts/ProxymaNova/ProximaNovaT-Thin.eot");
-    src: url("/fonts/ProxymaNova/ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"),
-        url("/fonts/ProxymaNova/ProximaNovaT-Thin.woff") format("woff"), url("/fonts/ProxymaNova/ProximaNovaT-Thin.ttf") format("truetype");
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProxymaNova/ProximaNovaT-Thin.eot');
+    src: url('../fonts/ProxymaNova/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/ProxymaNova/ProximaNovaT-Thin.woff') format('woff'),
+        url('../fonts/ProxymaNova/ProximaNovaT-Thin.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -60,7 +60,7 @@ i {
 }
 
 @mixin decor-rotated($url) {
-    content: "";
+    content: '';
     position: absolute;
     top: size(-70);
     left: size(-60);
@@ -72,7 +72,7 @@ i {
 }
 
 @mixin decor-rotated--mobile($url) {
-    content: "";
+    content: '';
     position: absolute;
     top: sizeMob(-30);
     left: sizeMob(-25);
@@ -90,13 +90,15 @@ i {
     right: -300px;
     position: relative;
     opacity: 0;
+    transform: rotateY(90deg);
+    display: inline-block;
 }
 
 .jBox-overlay .jBox-closeButton svg {
     display: none;
 }
 .jBox-overlay {
-    cursor: url("/images/Webp.net-resizeimage.png"), auto;
+    cursor: url('../images/Webp.net-resizeimage.png'), auto;
 }
 .swiper-slide.activated .text-decor--rotated:after {
     opacity: 1;
@@ -104,19 +106,19 @@ i {
 .text-decor {
     &--rotated {
         &:after {
-            @include decor-rotated("/images/materials/txt_round_1.svg");
+            @include decor-rotated('../images/materials/txt_round_1.svg');
             opacity: 0;
             transition: opacity 0.3s ease-in;
             transition-delay: 1s;
         }
         &.decorator-1:after {
-            @include decor-rotated("/images/materials/txt_round_1.svg");
+            @include decor-rotated('../images/materials/txt_round_1.svg');
         }
         &.decorator-2:after {
-            @include decor-rotated("/images/materials/txt_round_2.svg");
+            @include decor-rotated('../images/materials/txt_round_2.svg');
         }
         &.decorator-3:after {
-            @include decor-rotated("/images/materials/txt_round_3.svg");
+            @include decor-rotated('../images/materials/txt_round_3.svg');
         }
     }
 }
@@ -125,16 +127,16 @@ i {
     .text-decor {
         &--rotated {
             &:after {
-                @include decor-rotated--mobile("/images/materials/txt_round_1.svg");
+                @include decor-rotated--mobile('../images/materials/txt_round_1.svg');
             }
             &.decorator-1:after {
-                @include decor-rotated--mobile("/images/materials/txt_round_1.svg");
+                @include decor-rotated--mobile('../images/materials/txt_round_1.svg');
             }
             &.decorator-2:after {
-                @include decor-rotated--mobile("/images/materials/txt_round_2.svg");
+                @include decor-rotated--mobile('../images/materials/txt_round_2.svg');
             }
             &.decorator-3:after {
-                @include decor-rotated--mobile("/images/materials/txt_round_3.svg");
+                @include decor-rotated--mobile('../images/materials/txt_round_3.svg');
             }
         }
     }

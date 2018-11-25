@@ -4,7 +4,7 @@
     width: size(2280);
     height: 100vh;
     background: #000000;
-    // background: rgba(0, 0, 0, 0.6) url("/images/section_3/bg.png") left top / cover no-repeat;
+    // background: rgba(0, 0, 0, 0.6) url("../images/section_3/bg.png") left top / cover no-repeat;
     z-index: 1;
     .container {
         display: flex;
@@ -16,7 +16,7 @@
         flex: 0 1 18%;
     }
     .hero {
-        background: rgba(0, 0, 0, 0.6) url(/images/section_3/bg.png) left top/cover no-repeat;
+        background: rgba(0, 0, 0, 0.6) url('../images/section_3/bg.png') left top/cover no-repeat;
         // flex: 0 1 size(1640);
         flex: 0 1 82%;
         // max-width: size(1940);

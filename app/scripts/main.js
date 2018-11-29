@@ -37,7 +37,8 @@ $("ready", () => {
     var textAnimation = function() {
         const words = $(".swiper-slide-active .ml12");
         const section = $(".swiper-slide-active");
-
+        console.log("section", section);
+        words;
         if (!section.hasClass("activated")) {
             words.map((key, item) => {
                 $(item).wrap('<span class="new"></span>');
@@ -68,7 +69,7 @@ $("ready", () => {
             }
         }
     });
-    window.mySwiper = new Swiper("#swiper-statistics", {
+    window.mySwiper2 = new Swiper("#swiper-statistics", {
         freeMode: false,
         setWrapperSize: true,
         direction: "horizontal",
@@ -80,6 +81,7 @@ $("ready", () => {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
+        slideActiveClass: "swiper2-slide-active",
         pagination: {
             el: ".swiper-pagination",
             type: "bullets",
@@ -91,6 +93,7 @@ $("ready", () => {
     });
 
     window.mySwiper.on("slideChange", function() {
+        console.log("Work");
         setTimeout(() => {
             textAnimation();
         }, 500);

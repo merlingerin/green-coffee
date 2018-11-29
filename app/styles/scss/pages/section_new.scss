@@ -3,9 +3,9 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 120vw;
-    max-width: 120vw;
-    padding: 0 0 0 10vw;
+    width: 130vw;
+    max-width: 130vw;
+    padding: 0 0 0 30vw;
     background: $color_darkgreen url('/images/section_new-bg@x2.png') center right/contain no-repeat;
     &__title {
         position: relative;
@@ -120,7 +120,7 @@
             }
         }
         &__description {
-            max-width: 50%;
+            max-width: 40%;
         }
         &__paragraph {
             padding-bottom: 2vh;

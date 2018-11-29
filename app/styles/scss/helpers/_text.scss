@@ -16,6 +16,7 @@
         font-weight: 800;
         font-size: size(56);
         line-height: size(68);
+        letter-spacing: 3.72px;
     }
     .title_3 {
         font-family: $Montserrat;
@@ -67,6 +68,7 @@
         font-weight: 800;
         font-size: sizeMb(38);
         line-height: sizeMb(48);
+        letter-spacing: 2.72px;
     }
     .title_3 {
         font-family: $Montserrat;
@@ -111,6 +113,7 @@
         font-weight: 800;
         font-size: sizeTb(42);
         line-height: sizeTb(52);
+        letter-spacing: 1.72px;
     }
     .title_3 {
         font-family: $Montserrat;
@@ -187,8 +190,7 @@
         line-height: sizeMob(14);
     }
 }
-@media only screen and (device-width: $mobile) and (orientation: landscape),
-    only screen and (max-width: $mobile) and (orientation: landscape) {
+@media only screen and (device-width: $mobile) and (orientation: landscape), only screen and (max-width: $mobile) and (orientation: landscape) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;

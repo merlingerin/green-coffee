@@ -47,6 +47,13 @@
         font-weight: 700;
         line-height: size(25);
     }
+    .disclaimer {
+        font-family: $Montserrat;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(17);
+        letter-spacing: 0.85px;
+    }
 }
 @media screen and (max-width: $mds), only screen and (device-width: $mds) {
     .title_1 {

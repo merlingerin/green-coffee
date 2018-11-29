@@ -16,7 +16,7 @@
         flex: 0 1 18%;
     }
     .hero {
-        background: rgba(0, 0, 0, 0.6) url('../images/section_3/bg.png') left top/cover no-repeat;
+        background: rgba(0, 0, 0, 0.6) url("../images/section_3/bg.png") left top/cover no-repeat;
         // flex: 0 1 size(1640);
         flex: 0 1 82%;
         // max-width: size(1940);
@@ -40,13 +40,18 @@
             text-transform: uppercase;
             letter-spacing: 3.72px;
         }
+        .disclaimer {
+            max-width: 38%;
+            margin: auto 0;
+            color: #ffffff;
+        }
     }
     .button__to-order {
-        max-width: size(320);
+        max-width: size(336);
         max-height: size(75);
         line-height: size(24);
         font-size: size(18);
-        padding: size(26) size(100);
+        padding: size(26) size(45);
         margin-top: size(70);
     }
 }

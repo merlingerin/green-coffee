@@ -142,6 +142,94 @@
             }
         }
     }
+    .section_new {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0 15vw;
+        background-position: bottom center;
+        background-size: 200%;
+        &__title {
+            transform: translateY(15vh);
+        }
+        .swiper-slide {
+            padding-top: 25vh;
+            flex-flow: column wrap;
+
+            &__description {
+                max-width: 100%;
+            }
+            &__paragraph {
+                font-size: sizeMob(12);
+            }
+            .disclaimer {
+                display: none;
+            }
+            &__graphic {
+                margin-top: auto;
+                height: 1px;
+                .graphic--2 {
+                    left: 50vw;
+                    .graphic__stick {
+                        border-width: 3px;
+                    }
+                }
+                .graphic--1 {
+                    left: 15vw;
+                    .graphic__stick,
+                    .graphic__elips {
+                        border-width: 3px;
+                    }
+                }
+            }
+            .graphic {
+                &__title {
+                    font-size: 12px;
+                }
+                &__value {
+                    font-size: 12px;
+                }
+                &__elips {
+                    width: 12vw;
+                    height: 12vw;
+                }
+            }
+            &.swiper2-slide-active {
+                .graphic {
+                    opacity: 1;
+                    transform: translateY(0);
+                    &.graphic_5 .graphic__stick {
+                        height: calc(70vh / 2.3);
+                    }
+                    &.graphic_133 .graphic__stick {
+                        height: calc(28vh / 2.3);
+                    }
+                    &.graphic_148 .graphic__stick {
+                        height: calc(75vh / 2.3);
+                    }
+                    &.graphic_15 .graphic__stick {
+                        height: calc(26vh / 2.3);
+                    }
+                    &.graphic_24 .graphic__stick {
+                        height: calc(42vh / 2.3);
+                    }
+                    &.graphic_41 .graphic__stick {
+                        height: calc(51vh / 2.3);
+                    }
+                }
+            }
+        }
+        .swiper-pagination-bullets {
+            display: none;
+        }
+        .slider-navigation {
+            top: 50%;
+            left: 5vw;
+            right: 5vw;
+            .swiper-button-white {
+                transform: translateY(-100%);
+            }
+        }
+    }
     .section_3 {
         padding: 0;
         max-width: none;

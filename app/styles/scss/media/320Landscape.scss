@@ -74,6 +74,58 @@
             }
         }
     }
+    .section_new {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0 15vw;
+        background-position: bottom center;
+        background-size: 200%;
+        &__title {
+            transform: translateY(15vh);
+        }
+        .swiper-slide {
+            &__paragraph {
+                font-size: sizeMob(18);
+            }
+            .disclaimer {
+                display: none;
+            }
+            &__graphic {
+                margin-top: auto;
+                height: 1px;
+                .graphic--2 {
+                    left: 50vw;
+                    .graphic__stick {
+                        border-width: 3px;
+                    }
+                }
+                .graphic--1 {
+                    left: 15vw;
+                    .graphic__stick,
+                    .graphic__elips {
+                        border-width: 3px;
+                    }
+                }
+            }
+            .graphic {
+                &__title {
+                    font-size: 3vh;
+                }
+                &__value {
+                    font-size: 3vh;
+                }
+                &__elips {
+                    width: 8vw;
+                    height: 8vw;
+                }
+            }
+        }
+        .slider-navigation {
+            .swiper-button-white {
+                transform: translateY(00%);
+            }
+        }
+    }
     .section_3 {
         .hero {
             flex: 1 1 100%;

@@ -3,10 +3,10 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 130vw;
-    max-width: 130vw;
-    padding: 0 0 0 30vw;
-    background: $color_darkgreen url('/images/section_new-bg@x2.png') center right/contain no-repeat;
+    width: 120vw;
+    max-width: 120vw;
+    padding: 0 0 0 20vw;
+    background: $color_darkgreen url("/images/section_new-bg@x2.png") center right/contain no-repeat;
     &__title {
         position: relative;
         transform: translateY(30vh);
@@ -136,7 +136,7 @@
     }
     .slider-navigation {
         position: absolute;
-        bottom: 15vh;
+        top: 90vh;
         left: auto;
         &__wrapper {
             position: relative;

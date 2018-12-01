@@ -100,6 +100,13 @@
         font-weight: 700;
         line-height: sizeMb(18);
     }
+    .disclaimer {
+        font-family: $Montserrat;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(17);
+        letter-spacing: 0.85px;
+    }
 }
 @media screen and (max-width: $tablet), only screen and (device-width: $tablet) {
     .title_1 {
@@ -144,6 +151,13 @@
         font-size: sizeTb(18);
         font-weight: 700;
         line-height: sizeTb(24);
+    }
+    .disclaimer {
+        font-family: $Montserrat;
+        font-size: size(10);
+        font-weight: 500;
+        line-height: size(17);
+        letter-spacing: 0.85px;
     }
 }
 @media screen and (max-width: $mobile), only screen and (device-width: $mobile) {
@@ -190,7 +204,8 @@
         line-height: sizeMob(14);
     }
 }
-@media only screen and (device-width: $mobile) and (orientation: landscape), only screen and (max-width: $mobile) and (orientation: landscape) {
+@media only screen and (device-width: $mobile) and (orientation: landscape),
+    only screen and (max-width: $mobile) and (orientation: landscape) {
     .title_1 {
         font-family: $Montserrat;
         font-weight: 900;

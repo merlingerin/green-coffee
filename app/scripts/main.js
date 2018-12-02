@@ -183,7 +183,7 @@ $('ready', () => {
     });
 
     new jBox('Modal', {
-        attach: '.button__to-order',
+        attach: '.btn-order',
         title: 'Оформить заказ',
         content: $('#modal_to-order'),
         onCreated: function() {
@@ -210,30 +210,30 @@ $('ready', () => {
             }
         },
     });
-    // new jBox('Modal', {
-    //     attach: '.button__to-order',
-    //     title: 'Заполните форму и мы свяжемся с вами',
-    //     content:
-    //         '<div class="modal__content"><form action="#" id="modal-form" method="post"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></form></div>',
-    //     onCreated: function() {
-    //         var inputName = $('#input-name');
-    //         var inputTel = $('#input-tel');
-    //         inputName.add(inputTel).on('input', e => {
-    //             var target = e.target;
-    //             var value = target && target.value;
+    new jBox('Modal', {
+        attach: '.btn-callback',
+        title: 'Заполните форму и мы свяжемся с вами',
+        content:
+            '<div class="modal__content"><div class="modal__form"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></div></div>',
+        onCreated: function() {
+            var inputName = $('#input-name');
+            var inputTel = $('#input-tel');
+            inputName.add(inputTel).on('input', e => {
+                var target = e.target;
+                var value = target && target.value;
 
-    //             if (value && value.length > 0) {
-    //                 return $(target).addClass('filled');
-    //             }
-    //             return $(target).removeClass('filled');
-    //         });
-    //     },
-    //     onClose: function() {
-    //         if (window.mySwiper) {
-    //             mySwiper.update();
-    //         }
-    //     },
-    // });
+                if (value && value.length > 0) {
+                    return $(target).addClass('filled');
+                }
+                return $(target).removeClass('filled');
+            });
+        },
+        onClose: function() {
+            if (window.mySwiper) {
+                mySwiper.update();
+            }
+        },
+    });
 
     /**
      * Preloader

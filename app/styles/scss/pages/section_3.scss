@@ -49,11 +49,15 @@
         }
     }
     .button__to-order {
-        max-width: size(336);
+        // max-width: size(336);
+        max-width: none;
         max-height: size(75);
         line-height: size(24);
         font-size: size(18);
         padding: size(26) size(45);
         margin-top: size(70);
+        &.button--price {
+            margin-top: 10px;
+        }
     }
 }

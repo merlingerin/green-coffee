@@ -12,9 +12,31 @@
         padding: 1%;
         .jBox-title {
             font-size: sizeMob(12);
+            width: 100%;
+            text-align: center;
+            padding: 5px 2vw;
         }
-        .modal__content form input {
-            font-size: sizeMob(12);
+
+        .modal__content {
+            flex: 1 1 100%;
+            .modal__form {
+                flex: 1 1 100%;
+                input {
+                    padding: 10px 20px;
+                    font-size: sizeMob(12);
+                }
+            }
+            .form-calculator__total-price .price__value,
+            .form-calculator__total-price .price__type,
+            .form-calculator__price {
+                font-size: 16px;
+            }
+            .form-calculator {
+                width: 100%;
+                > * {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 
@@ -259,10 +281,19 @@
                 width: 100%;
                 max-width: 95%;
                 margin: 0;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 26px;
                 max-height: 100%;
+                margin-top: 10px;
+                text-align: center;
             }
+        }
+        .hero .disclaimer {
+            width: 100%;
+            display: block;
+            max-width: 100%;
+            text-align: center;
+            margin-top: 10px;
         }
     }
     .section_4 {
@@ -349,7 +380,7 @@
                 width: 100%;
                 max-width: 92%;
                 margin: auto;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 26px;
                 max-height: 100%;
             }
@@ -357,7 +388,7 @@
                 max-height: none;
                 margin-left: 0;
                 margin: 17% auto auto;
-                font-size: 18px;
+                font-size: 14px;
                 line-height: 32px;
                 max-width: 60%;
                 text-align: center;

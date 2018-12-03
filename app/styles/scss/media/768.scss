@@ -3,6 +3,9 @@
         max-width: sizeTb(156);
         max-height: sizeTb(38);
     }
+    .modal--to-order .form-image {
+        display: none !important;
+    }
     .header {
         padding: sizeTb(70) sizeTb(20) 0 sizeTb(35);
         .facebook-link,
@@ -112,7 +115,8 @@
             }
         }
         .button__to-order {
-            max-width: sizeTb(320);
+            // max-width: sizeTb(320);
+            max-width: none;
             max-height: sizeTb(75);
             line-height: sizeTb(24);
             font-size: sizeTb(18);

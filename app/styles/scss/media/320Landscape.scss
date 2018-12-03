@@ -1,15 +1,14 @@
-@media only screen and (device-width: $mobile) and (orientation: landscape),
-    only screen and (max-width: $mobile) and (orientation: landscape) {
+@media only screen and (device-width: $mobile) and (orientation: landscape), only screen and (max-width: $mobile) and (orientation: landscape) {
     .jBox-container {
         padding: 0;
         .jBox-title {
             font-size: sizeMobL(12);
         }
-        .modal__content form input {
+        .modal__content .modal__form input {
             font-size: sizeMobL(10);
         }
     }
-    .jBox-container .modal__content form input#input-tel {
+    .jBox-container .modal__content .modal__form input#input-tel {
         margin-bottom: sizeMobL(25);
     }
     .jBox-overlay,

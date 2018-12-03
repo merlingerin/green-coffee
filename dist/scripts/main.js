@@ -4,9 +4,14 @@ $("ready", () => {
     /**
      * SECTION 2 ANIMATIONS
      */
-    var section2Animation = new TimelineMax({ ease: SlowMo.ease.config(0.4, 0.6, false) });
+    var section2Animation = new TimelineMax({ repeat: 999999, ease: SlowMo.ease.config(0.4, 0.6, false) });
+    // var imageTopAnimation = new TimelineMax({repeat: })
     var imageMan = document.querySelector(".image-man");
     var imageWoman = document.querySelector(".image-woman");
+    var imageManTop = document.querySelector(".image-man-top");
+    var imageManBottom = document.querySelector(".image-man-bottom");
+    var imageWomanTop = document.querySelector(".image-woman-top");
+    var imageWomanTop = document.querySelector(".image-woman-top");
     var imageDescription_1 = document.querySelector(".description--top");
     var imageDescription_2 = document.querySelector(".description--bottom");
     var note = document.querySelectorAll(".note");
@@ -14,6 +19,8 @@ $("ready", () => {
     var imageDescription_3 = document.querySelector(".image-man .text-line-1");
     var imageDescription_5 = document.querySelector(".image-woman .text-line-1");
     var imageDescriptionLine2 = document.querySelectorAll(".text-line-2");
+    var $ImageMan = $(".image-man");
+    var $ImageWoman = $(".image-woman");
     section2Animation.to(note, 0, { opacity: 0, yPercent: -200 });
     section2Animation.to(imageDescriptionTextLines, 0, { width: 0, opacity: 0 });
 
@@ -21,22 +28,69 @@ $("ready", () => {
         if (!item) return;
         return $(item).addClass("inViewport");
     };
-    // ============================================================
+    // // ============================================================
     inViewport(imageWoman, item => {
         addAnimationToImage(item);
         addAnimationToImage(imageMan);
-        section2Animation.to(imageDescription_1, 1, { opacity: 1, yPercent: 0 }, 1);
+
+        section2Animation.to(
+            imageDescription_1,
+            1,
+            {
+                opacity: 1,
+                yPercent: 0,
+                onComplete: function() {
+                    $ImageMan.addClass("animated");
+                    $ImageWoman.addClass("animated");
+                }
+            },
+            1
+        );
         section2Animation.to(imageDescription_3, 1, { width: "50%", opacity: 1 }, 2.5);
         section2Animation.to(imageDescription_5, 1, { width: "62%", opacity: 1 }, 2.5);
-        section2Animation.to(imageDescription_2, 1, { opacity: 1, yPercent: 0 }, 4);
-        section2Animation.to(imageDescriptionLine2, 1, { width: "50%", opacity: 1 }, 5.5);
+        section2Animation.to(
+            imageDescription_2,
+            1,
+            {
+                opacity: 1,
+                yPercent: 0
+            },
+            8
+        );
+        section2Animation.to(
+            imageDescriptionLine2,
+            1,
+            {
+                width: "50%",
+                opacity: 1,
+                onComplete: function() {
+                    $ImageMan.removeClass("animated");
+                    $ImageWoman.removeClass("animated");
+                    $ImageMan.addClass("animated-bottom");
+                    $ImageWoman.addClass("animated-bottom");
+                }
+            },
+            10
+        );
+        section2Animation.to(
+            imageDescriptionLine2,
+            4,
+            {
+                onComplete: function() {
+                    $ImageMan.removeClass("animated-bottom");
+                    $ImageWoman.removeClass("animated-bottom");
+                }
+            },
+            10
+        );
+        // section2Animation.reverse(-15);
     });
 
     // ============================================================
 
     var textAnimation = function() {
-        const words = $(".swiper-slide-active .ml12");
-        const section = $(".swiper-slide-active");
+        var words = $(".swiper-slide-active .ml12");
+        var section = $(".swiper-slide-active");
 
         if (!section.hasClass("activated")) {
             words.map((key, item) => {
@@ -47,9 +101,9 @@ $("ready", () => {
         }
     };
 
-    const winWidth = window.innerWidth;
-    const winHeight = window.innerHeight;
-    const aspectRation = winWidth / winHeight;
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+    var aspectRation = winWidth / winHeight;
 
     window.mySwiper = new Swiper("#body-swiper", {
         freeMode: true,
@@ -70,7 +124,7 @@ $("ready", () => {
     });
     window.mySwiper2 = new Swiper("#swiper-statistics", {
         freeMode: false,
-        setWrapperSize: true,
+        // setWrapperSize: true,
         direction: "horizontal",
         slidesPerView: 1,
         simulateTouch: false,
@@ -95,7 +149,6 @@ $("ready", () => {
     });
 
     window.mySwiper.on("slideChange", function() {
-        console.log("Work");
         setTimeout(() => {
             textAnimation();
         }, 500);
@@ -118,7 +171,7 @@ $("ready", () => {
         window.mySwiper.update();
 
         setTimeout(() => {
-            const currentWinWidth = window.innerWidth;
+            var currentWinWidth = window.innerWidth;
 
             if ((winWidth >= 768 && currentWinWidth < 768) || (winWidth < 768 && currentWinWidth >= 768)) {
                 window.location.reload();
@@ -130,16 +183,44 @@ $("ready", () => {
     });
 
     new jBox("Modal", {
-        attach: ".button__to-order",
+        attach: ".btn-order",
+        title: "Оформить заказ",
+        content: $("#modal_to-order"),
+        onCreated: function() {
+            var inputName = $("#input-name");
+            var inputTel = $("#input-tel");
+            var inputEmail = $("#input-email");
+            inputName
+                .add(inputTel)
+                .add(inputEmail)
+                .on("input", e => {
+                    var target = e.target;
+                    var value = target && target.value;
+
+                    if (value && value.length > 0) {
+                        return $(target).addClass("filled");
+                    }
+                    return $(target).removeClass("filled");
+                });
+        },
+        onClose: function() {
+            $("#success-modal").removeClass("success");
+            if (window.mySwiper) {
+                mySwiper.update();
+            }
+        }
+    });
+    new jBox("Modal", {
+        attach: ".btn-callback",
         title: "Заполните форму и мы свяжемся с вами",
         content:
-            '<div class="modal__content"><form action="#" id="modal-form" method="post"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></form></div>',
+            '<div class="modal__content"><div class="modal__form"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></div></div>',
         onCreated: function() {
-            const inputName = $("#input-name");
-            const inputTel = $("#input-tel");
+            var inputName = $("#input-name");
+            var inputTel = $("#input-tel");
             inputName.add(inputTel).on("input", e => {
-                const target = e.target;
-                const value = target && target.value;
+                var target = e.target;
+                var value = target && target.value;
 
                 if (value && value.length > 0) {
                     return $(target).addClass("filled");
@@ -168,7 +249,7 @@ $("ready", () => {
 
         menuAn.to(menuEl, 1, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
         openMenu.addEventListener("click", function() {
-            const that = $(this);
+            var that = $(this);
             if (that.hasClass("active")) {
                 that.removeClass("active");
                 window.mySwiper.mousewheel.enable();
@@ -196,13 +277,29 @@ $("ready", () => {
         | MENU LOGIC
         |--------------------------------------------------
         */
-        const menuItems = $(".menu__list li");
+        var menuItems = $(".menu__list li");
         menuItems.on("click", event => {
-            const target = event.currentTarget;
+            var target = event.currentTarget;
             $(openMenu).removeClass("active");
-            var index = $(target).index() === 0 ? $(target).index() : $(target).index() + 1;
-            mySwiper.slideTo(index, 500);
-            mySwiper.update();
+
+            var index = $(target).index();
+            switch (index) {
+                case 0:
+                    mySwiper.slideTo(index, 500);
+                    return mySwiper.update();
+                case 1:
+                    mySwiper.slideTo(index, 500);
+                    return mySwiper.update();
+                case 2:
+                    mySwiper.slideTo(4, 500);
+                    return mySwiper.update();
+                case 3:
+                    mySwiper.slideTo(5, 500);
+                    return mySwiper.update();
+                case 4:
+                    mySwiper.slideTo(6, 500);
+                    return mySwiper.update();
+            }
         });
         // ============================================================
 
@@ -237,24 +334,24 @@ $("ready", () => {
     | CARD ANIMATION
     |--------------------------------------------------
     */
-    const card = $(".card");
+    var card = $(".card");
 
     if (winWidth < 768) {
         card.on("click", event => {
-            const target = $(event.currentTarget);
+            var target = $(event.currentTarget);
             $(".card.active")
                 .not(target)
                 .removeClass("active");
 
             if (!target.hasClass("active")) {
-                const elem = $(event.currentTarget).children(".card__image");
-                const image = elem.children("img");
-                const imageWidth = image.width();
+                var elem = $(event.currentTarget).children(".card__image");
+                var image = elem.children("img");
+                var imageWidth = image.width();
                 TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
                 target.addClass("active");
                 mySwiper.update();
             } else {
-                const elem = $(event.currentTarget).children(".card__image");
+                var elem = $(event.currentTarget).children(".card__image");
 
                 TweenLite.to(elem, 0.5, { width: `0px` });
                 target.removeClass("active");
@@ -263,12 +360,12 @@ $("ready", () => {
         });
     } else {
         card.on("mouseenter", event => {
-            const target = $(event.currentTarget);
+            var target = $(event.currentTarget);
 
             if (!target.hasClass("active")) {
-                const elem = $(event.currentTarget).children(".card__image");
-                const image = elem.children("img");
-                const imageWidth = image.width();
+                var elem = $(event.currentTarget).children(".card__image");
+                var image = elem.children("img");
+                var imageWidth = image.width();
 
                 TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
                 target.addClass("active");
@@ -277,12 +374,94 @@ $("ready", () => {
         });
 
         card.on("mouseleave", event => {
-            const target = $(event.currentTarget);
+            var target = $(event.currentTarget);
             target.removeClass("active");
-            const elem = $(event.currentTarget).children(".card__image");
+            var elem = $(event.currentTarget).children(".card__image");
 
             TweenLite.to(elem, 0.5, { width: `0px` });
             mySwiper.update();
         });
     }
+    var modal_to_order = () => {
+        /**
+        |--------------------------------------------------
+        | FORM INPUTS
+        |--------------------------------------------------
+        */
+        var inputName = $("#input-name");
+        var inputTel = $("#input-tel");
+        var inputEmail = $("#input-email");
+        // ============================================================
+
+        var button_inc = $(".buttons__button-inc");
+        var button_dec = $(".buttons__button-dec");
+        var priceCounter = $("#order-count");
+        var totalPrice = $(".form-calculator__total-price .price__value");
+        var submitButton = $("#to_order-button");
+        var isSending = false;
+        var pricePerOnce = 1200;
+        priceCounterValue = parseInt(priceCounter.text());
+        totalPrice.text(pricePerOnce * priceCounterValue);
+
+        submitButton.on("submit", function(e) {
+            e.preventDefault();
+        });
+
+        submitButton.on("click", function(e) {
+            console.log("work 2");
+
+            isSending = true;
+            var formData = {
+                name: inputName.val(),
+                phone: inputTel.val(),
+                email: inputEmail.val(),
+                value: priceCounter.text(),
+                totalPrice: totalPrice.text()
+            };
+            $.ajax({
+                type: "POST",
+                url: "/sendEmail.php",
+                data: formData,
+                success: function() {
+                    $("#success-modal").addClass("success");
+                    console.log("Success");
+                    var element = document.querySelector("#success-modal");
+
+                    successEmail(element);
+                },
+                error: function() {
+                    console.log("Error");
+                    $("#modal-form").addClass("error");
+                }
+            });
+        });
+
+        button_dec.on("click", () => {
+            priceCounterValue = parseInt(priceCounter.text());
+            if (priceCounterValue === 0) {
+                return false;
+            }
+            totalPrice.text(pricePerOnce * (priceCounterValue - 1));
+            return priceCounter.text(--priceCounterValue);
+        });
+        button_inc.on("click", () => {
+            priceCounterValue = parseInt(priceCounter.text());
+            if (priceCounterValue === 9999) {
+                return false;
+            }
+            totalPrice.text(pricePerOnce * (1 + priceCounterValue));
+
+            return priceCounter.text(++priceCounterValue);
+        });
+    };
+    modal_to_order();
+    var successEmail = function(el) {
+        return lottie.loadAnimation({
+            container: el, // the dom element that will contain the animation
+            renderer: "svg",
+            loop: false,
+            autoplay: true,
+            path: "../images/check_animation.json" // the path to the animation json
+        });
+    };
 });

@@ -53,7 +53,13 @@ $("ready", () => {
             1,
             {
                 opacity: 1,
-                yPercent: 0
+                yPercent: 0,
+                onComplete: function() {
+                    $ImageMan.removeClass("animated");
+                    $ImageWoman.removeClass("animated");
+                    $ImageMan.addClass("animated-bottom");
+                    $ImageWoman.addClass("animated-bottom");
+                }
             },
             8
         );
@@ -62,13 +68,7 @@ $("ready", () => {
             1,
             {
                 width: "50%",
-                opacity: 1,
-                onComplete: function() {
-                    $ImageMan.removeClass("animated");
-                    $ImageWoman.removeClass("animated");
-                    $ImageMan.addClass("animated-bottom");
-                    $ImageWoman.addClass("animated-bottom");
-                }
+                opacity: 1
             },
             10
         );
@@ -81,7 +81,7 @@ $("ready", () => {
                     $ImageWoman.removeClass("animated-bottom");
                 }
             },
-            10
+            14
         );
         // section2Animation.reverse(-15);
     });
@@ -420,7 +420,7 @@ $("ready", () => {
             };
             $.ajax({
                 type: "POST",
-                url: "/sendEmail.php",
+                url: "./sendEmail.php",
                 data: formData,
                 success: function() {
                     $("#success-modal").addClass("success");
@@ -461,7 +461,7 @@ $("ready", () => {
             renderer: "svg",
             loop: false,
             autoplay: true,
-            path: "../images/check_animation.json" // the path to the animation json
+            path: "./images/check_animation.json" // the path to the animation json
         });
     };
 });

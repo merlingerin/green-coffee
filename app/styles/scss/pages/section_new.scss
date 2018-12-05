@@ -6,7 +6,7 @@
     width: 120vw;
     max-width: 120vw;
     padding: 0 0 0 20vw;
-    background: $color_darkgreen url('/images/section_new-bg@x2.png') center right/contain no-repeat;
+    background: $color_darkgreen url("../images/section_new-bg@x2.png") center right/contain no-repeat;
     &__title {
         position: relative;
         transform: translateY(30vh);
@@ -132,7 +132,7 @@
             font-weight: 700;
         }
         .disclaimer {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.9);
         }
     }
     .slider-navigation {

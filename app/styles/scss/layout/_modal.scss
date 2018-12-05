@@ -23,7 +23,7 @@
         max-width: 100%;
         width: 100%;
         height: 100%;
-        background: #ffff;
+        background: #fff;
         z-index: -999;
         opacity: 0;
         transition: all 0.5s ease-in-out;
@@ -79,7 +79,7 @@
                 }
             }
         }
-        input[type='submit'] {
+        input[type="submit"] {
             outline: none;
             border: none;
             background-color: $color_darkgreen;
@@ -109,7 +109,6 @@
 }
 
 #jBox1 {
-    left: auto !important;
     .jBox-container {
         width: 90%;
         height: 100%;
@@ -159,7 +158,7 @@
                 max-width: 50%;
                 height: 100%;
                 width: 50%;
-                background: transparent url('../images/section_1/bottle.png') center top/contain no-repeat;
+                background: transparent url("../images/section_1/bottle.png") center top/contain no-repeat;
             }
         }
     }

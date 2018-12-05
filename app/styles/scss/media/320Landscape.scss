@@ -134,7 +134,7 @@
             }
             .button__to-order {
                 max-width: 50%;
-                line-height: 42px;
+                line-height: 18px;
             }
         }
     }
@@ -176,12 +176,15 @@
 
             .button__to-order {
                 max-width: 50%;
-                line-height: 42px;
+                line-height: 18px;
             }
             .button--transparent {
                 flex: 1 1 100%;
                 margin: 5% auto auto;
             }
+        }
+        .button-container {
+            margin: 7.44681vh auto 0;
         }
     }
     .section_6 {

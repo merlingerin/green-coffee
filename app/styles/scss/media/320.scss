@@ -205,14 +205,14 @@
             }
             .graphic {
                 &__title {
-                    font-size: 12px;
+                    font-size: 10px;
                 }
                 &__value {
                     font-size: 12px;
                 }
                 &__elips {
-                    width: 12vw;
-                    height: 12vw;
+                    width: 20vw;
+                    height: 20vw;
                 }
             }
             &.swiper2-slide-active {
@@ -220,22 +220,22 @@
                     opacity: 1;
                     transform: translateY(0);
                     &.graphic_5 .graphic__stick {
-                        height: calc(70vh / 2.3);
+                        height: calc(70vh / 4);
                     }
                     &.graphic_133 .graphic__stick {
-                        height: calc(28vh / 2.3);
+                        height: calc(28vh / 4);
                     }
                     &.graphic_148 .graphic__stick {
-                        height: calc(75vh / 2.3);
+                        height: calc(75vh / 4);
                     }
                     &.graphic_15 .graphic__stick {
-                        height: calc(26vh / 2.3);
+                        height: calc(26vh / 4);
                     }
                     &.graphic_24 .graphic__stick {
-                        height: calc(42vh / 2.3);
+                        height: calc(42vh / 4);
                     }
                     &.graphic_41 .graphic__stick {
-                        height: calc(51vh / 2.3);
+                        height: calc(51vh / 4);
                     }
                 }
             }
@@ -282,7 +282,7 @@
                 max-width: 95%;
                 margin: 0;
                 font-size: 14px;
-                line-height: 26px;
+                line-height: 18px;
                 max-height: 100%;
                 margin-top: 10px;
                 text-align: center;
@@ -381,7 +381,7 @@
                 max-width: 92%;
                 margin: auto;
                 font-size: 14px;
-                line-height: 26px;
+                line-height: 18px;
                 max-height: 100%;
             }
             .button--transparent {
@@ -389,9 +389,10 @@
                 margin-left: 0;
                 margin: 17% auto auto;
                 font-size: 14px;
-                line-height: 32px;
+                line-height: 18px;
                 max-width: 60%;
                 text-align: center;
+                padding: 0;
             }
         }
     }

@@ -58,5 +58,9 @@
         line-height: size(24);
         font-size: size(18);
         padding: size(26) size(100);
+        &.button--transparent {
+            padding: size(26) 0;
+            max-width: fit-content;
+        }
     }
 }

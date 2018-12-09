@@ -4,6 +4,7 @@
     justify-content: flex-start;
     color: $color_white;
     flex: 1 1 auto;
+    transition: opacity 0.2s ease;
     &__link {
         position: relative;
         display: inline-block;
@@ -119,7 +120,7 @@
             height: 45px;
             padding: 0 15px;
             border-radius: 50%;
-            // background-color: $color_darkgreen;
+            background-color: $color_darkgreen;
             cursor: pointer;
             &__item {
                 width: 12px;
@@ -134,13 +135,17 @@
                     transform: translateX(50%);
                 }
             }
-            &:hover {
-                .burger-button__item {
-                    &:nth-child(even) {
-                        transform: translateX(-20%);
-                    }
-                    &:nth-child(odd) {
-                        transform: translateX(20%);
+        }
+        @media screen and (hover) {
+            .menu-button .burger-button {
+                &:hover {
+                    .burger-button__item {
+                        &:nth-child(even) {
+                            transform: translateX(-20%);
+                        }
+                        &:nth-child(odd) {
+                            transform: translateX(20%);
+                        }
                     }
                 }
             }

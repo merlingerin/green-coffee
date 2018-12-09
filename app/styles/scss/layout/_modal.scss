@@ -79,7 +79,7 @@
                 }
             }
         }
-        input[type="submit"] {
+        input[type='submit'] {
             outline: none;
             border: none;
             background-color: $color_darkgreen;
@@ -133,87 +133,93 @@
         padding-left: 0;
     }
 }
-
 .modal {
     &--to-order {
-        display: flex !important;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: stretch;
-        .modal__form {
+        display: none;
+    }
+}
+.jBox-container {
+    .modal {
+        &--to-order {
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
-            align-items: flex-start;
-            flex: 0 1 45%;
-            position: relative;
-        }
-        .modal__content {
-            flex: 0 1 45%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space;
-            .form-image {
-                max-height: 100%;
-                max-width: 50%;
-                height: 100%;
-                width: 50%;
-                background: transparent url("../images/section_1/bottle.png") center top/contain no-repeat;
-            }
-        }
-    }
-    .form {
-        &-calculator {
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-            &__title {
-                color: #404040;
-                font-weight: 700;
-                letter-spacing: 1.2px;
-                font-size: size(28);
-            }
-            &__price {
-                padding-top: 10px;
-                font-size: size(34);
-                font-weight: 700;
-                color: $color_darkgreen;
-            }
-            &__total-price {
-                margin-top: auto;
-                .price {
-                    &__title {
-                        font-size: 16px;
-                        color: #777777;
-                        font-weight: 500;
-                        padding-right: 10px;
-                    }
-                    &__value,
-                    &__type {
-                        font-size: 24px;
-                        color: $color_darkgreen;
-                        font-weight: 700;
-                    }
-                }
-            }
-            &__buttons {
+            align-items: stretch;
+            .modal__form {
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: space-between;
-                max-width: 100px;
-                width: 100%;
-                margin: auto 0;
-                font-size: 3vh;
-                font-weight: 700;
-                color: #777777;
-                .buttons__button-dec,
-                .buttons__button-inc {
-                    cursor: pointer;
-                    user-select: none;
+                align-items: flex-start;
+                flex: 0 1 45%;
+                position: relative;
+            }
+            .modal__content {
+                flex: 0 1 45%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space;
+                .form-image {
+                    max-height: 100%;
+                    max-width: 50%;
+                    height: 100%;
+                    width: 50%;
+                    background: transparent url('../images/section_1/bottle.png') center top/contain no-repeat;
                 }
-                i {
-                    font-style: normal;
+            }
+        }
+        .form {
+            &-calculator {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                &__title {
+                    color: #404040;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    font-size: size(28);
+                }
+                &__price {
+                    padding-top: 10px;
+                    font-size: size(34);
+                    font-weight: 700;
+                    color: $color_darkgreen;
+                }
+                &__total-price {
+                    margin-top: auto;
+                    .price {
+                        &__title {
+                            font-size: 16px;
+                            color: #777777;
+                            font-weight: 500;
+                            padding-right: 10px;
+                        }
+                        &__value,
+                        &__type {
+                            font-size: 24px;
+                            color: $color_darkgreen;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                &__buttons {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    max-width: 100px;
+                    width: 100%;
+                    margin: auto 0;
+                    font-size: 3vh;
+                    font-weight: 700;
+                    color: #777777;
+                    .buttons__button-dec,
+                    .buttons__button-inc {
+                        cursor: pointer;
+                        user-select: none;
+                    }
+                    i {
+                        font-style: normal;
+                    }
                 }
             }
         }

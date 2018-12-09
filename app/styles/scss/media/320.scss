@@ -41,6 +41,7 @@
     }
 
     .header {
+        position: absolute;
         .logo {
             &__link {
                 width: 120px;
@@ -59,13 +60,13 @@
                 height: 20px;
             }
         }
+        .button__to-order {
+            display: none;
+        }
     }
     .section_1 {
         height: auto;
         .scroll-page {
-            display: none;
-        }
-        .button__to-order {
             display: none;
         }
         .hero {

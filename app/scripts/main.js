@@ -1,32 +1,33 @@
-$("ready", () => {
+$('ready', () => {
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     /**
      * SECTION 2 ANIMATIONS
      */
     var section2Animation = new TimelineMax({ repeat: 999999, ease: SlowMo.ease.config(0.4, 0.6, false) });
     // var imageTopAnimation = new TimelineMax({repeat: })
-    var imageMan = document.querySelector(".image-man");
-    var imageWoman = document.querySelector(".image-woman");
-    var imageManTop = document.querySelector(".image-man-top");
-    var imageManBottom = document.querySelector(".image-man-bottom");
-    var imageWomanTop = document.querySelector(".image-woman-top");
-    var imageWomanTop = document.querySelector(".image-woman-top");
-    var imageDescription_1 = document.querySelector(".description--top");
-    var imageDescription_2 = document.querySelector(".description--bottom");
-    var note = document.querySelectorAll(".note");
-    var imageDescriptionTextLines = document.querySelectorAll(".text-line");
-    var imageDescription_3 = document.querySelector(".image-man .text-line-1");
-    var imageDescription_5 = document.querySelector(".image-woman .text-line-1");
-    var imageDescriptionLine2 = document.querySelectorAll(".text-line-2");
-    var $ImageMan = $(".image-man");
-    var $ImageWoman = $(".image-woman");
+    var imageMan = document.querySelector('.image-man');
+    var imageWoman = document.querySelector('.image-woman');
+    var imageManTop = document.querySelector('.image-man-top');
+    var imageManBottom = document.querySelector('.image-man-bottom');
+    var imageWomanTop = document.querySelector('.image-woman-top');
+    var imageWomanTop = document.querySelector('.image-woman-top');
+    var imageDescription_1 = document.querySelector('.description--top');
+    var imageDescription_2 = document.querySelector('.description--bottom');
+    var note = document.querySelectorAll('.note');
+    var imageDescriptionTextLines = document.querySelectorAll('.text-line');
+    var imageDescription_3 = document.querySelector('.image-man .text-line-1');
+    var imageDescription_5 = document.querySelector('.image-woman .text-line-1');
+    var imageDescriptionLine2 = document.querySelectorAll('.text-line-2');
+    var $ImageMan = $('.image-man');
+    var $ImageWoman = $('.image-woman');
     section2Animation.to(note, 0, { opacity: 0, yPercent: -200 });
     section2Animation.to(imageDescriptionTextLines, 0, { width: 0, opacity: 0 });
 
     var addAnimationToImage = item => {
         if (!item) return;
-        return $(item).addClass("inViewport");
+        return $(item).addClass('inViewport');
     };
     // // ============================================================
     inViewport(imageWoman, item => {
@@ -40,14 +41,14 @@ $("ready", () => {
                 opacity: 1,
                 yPercent: 0,
                 onComplete: function() {
-                    $ImageMan.addClass("animated");
-                    $ImageWoman.addClass("animated");
-                }
+                    $ImageMan.addClass('animated');
+                    $ImageWoman.addClass('animated');
+                },
             },
-            1
+            1,
         );
-        section2Animation.to(imageDescription_3, 1, { width: "50%", opacity: 1 }, 2.5);
-        section2Animation.to(imageDescription_5, 1, { width: "62%", opacity: 1 }, 2.5);
+        section2Animation.to(imageDescription_3, 1, { width: '50%', opacity: 1 }, 2.5);
+        section2Animation.to(imageDescription_5, 1, { width: '62%', opacity: 1 }, 2.5);
         section2Animation.to(
             imageDescription_2,
             1,
@@ -55,33 +56,33 @@ $("ready", () => {
                 opacity: 1,
                 yPercent: 0,
                 onComplete: function() {
-                    $ImageMan.removeClass("animated");
-                    $ImageWoman.removeClass("animated");
-                    $ImageMan.addClass("animated-bottom");
-                    $ImageWoman.addClass("animated-bottom");
-                }
+                    $ImageMan.removeClass('animated');
+                    $ImageWoman.removeClass('animated');
+                    $ImageMan.addClass('animated-bottom');
+                    $ImageWoman.addClass('animated-bottom');
+                },
             },
-            8
+            8,
         );
         section2Animation.to(
             imageDescriptionLine2,
             1,
             {
-                width: "50%",
-                opacity: 1
+                width: '50%',
+                opacity: 1,
             },
-            10
+            10,
         );
         section2Animation.to(
             imageDescriptionLine2,
             4,
             {
                 onComplete: function() {
-                    $ImageMan.removeClass("animated-bottom");
-                    $ImageWoman.removeClass("animated-bottom");
-                }
+                    $ImageMan.removeClass('animated-bottom');
+                    $ImageWoman.removeClass('animated-bottom');
+                },
             },
-            14
+            14,
         );
         // section2Animation.reverse(-15);
     });
@@ -89,15 +90,15 @@ $("ready", () => {
     // ============================================================
 
     var textAnimation = function() {
-        var words = $(".swiper-slide-active .ml12");
-        var section = $(".swiper-slide-active");
+        var words = $('.swiper-slide-active .ml12');
+        var section = $('.swiper-slide-active');
 
-        if (!section.hasClass("activated")) {
+        if (!section.hasClass('activated')) {
             words.map((key, item) => {
                 $(item).wrap('<span class="new"></span>');
                 TweenLite.to(item, key / 3 + 0.7, { right: 0, opacity: 1, rotationY: 0 });
             });
-            section.addClass("activated");
+            section.addClass('activated');
         }
     };
 
@@ -105,27 +106,27 @@ $("ready", () => {
     var winHeight = window.innerHeight;
     var aspectRation = winWidth / winHeight;
 
-    window.mySwiper = new Swiper("#body-swiper", {
+    window.mySwiper = new Swiper('#body-swiper', {
         freeMode: true,
         setWrapperSize: true,
-        direction: "horizontal",
-        slidesPerView: "auto",
+        direction: 'horizontal',
+        slidesPerView: 'auto',
         simulateTouch: false,
         resistance: true,
         resistanceRatio: 0,
         mousewheel: {
-            sensitivity: 1
+            sensitivity: 1,
         },
         breakpoints: {
             767: {
-                direction: "vertical"
-            }
-        }
+                direction: 'vertical',
+            },
+        },
     });
-    window.mySwiper2 = new Swiper("#swiper-statistics", {
+    window.mySwiper2 = new Swiper('#swiper-statistics', {
         freeMode: false,
         // setWrapperSize: true,
-        direction: "horizontal",
+        direction: 'horizontal',
         slidesPerView: 1,
         simulateTouch: false,
         resistance: false,
@@ -134,21 +135,21 @@ $("ready", () => {
         // effect: 'fade',
         speed: 1000,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        slideActiveClass: "swiper2-slide-active",
+        slideActiveClass: 'swiper2-slide-active',
         pagination: {
-            el: ".swiper-pagination",
-            type: "bullets",
+            el: '.swiper-pagination',
+            type: 'bullets',
             clickable: true,
             renderBullet: function(index, className) {
-                return '<span class="' + className + '">0' + (index + 1) + "</span>";
-            }
-        }
+                return '<span class="' + className + '">0' + (index + 1) + '</span>';
+            },
+        },
     });
 
-    window.mySwiper.on("slideChange", function() {
+    window.mySwiper.on('slideChange', function() {
         setTimeout(() => {
             textAnimation();
         }, 500);
@@ -156,18 +157,18 @@ $("ready", () => {
     });
 
     // We listen to the resize event
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
         window.mySwiper.update();
         // We execute the same script as before
         let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
         setTimeout(() => {
             window.mySwiper.update();
             window.mySwiper.update();
             window.mySwiper.update();
         }, 1000);
     });
-    window.addEventListener("orientationchange", () => {
+    window.addEventListener('orientationchange', () => {
         window.mySwiper.update();
 
         setTimeout(() => {
@@ -182,93 +183,152 @@ $("ready", () => {
         }, 1000);
     });
 
-    new jBox("Modal", {
-        attach: ".btn-order",
-        title: "Оформить заказ",
-        content: $("#modal_to-order"),
+    var headerLogo = $('.header .logo');
+    var headerBtnText = $('.header .menu-button__text');
+    var headerButton = $('.header .button__to-order');
+    var headerLink = $('.header .facebook-link');
+    var headerNumber = $('.header .facebook-link');
+    var headerTel = $('.header .tel-number');
+
+    if (window.innerWidth > 767) {
+        window.mySwiper.on('scroll', () => {
+            const translate = window.mySwiper.translate;
+            let opacity = 1 + translate / 1000;
+
+            if (opacity > 0 && opacity < 0.5) {
+                headerLogo.css('opacity', opacity);
+                headerButton.css('opacity', opacity);
+                headerLink.css('opacity', opacity);
+                headerNumber.css('opacity', opacity);
+                headerTel.css('opacity', opacity);
+                headerBtnText.css('opacity', opacity);
+            }
+            if (opacity < 0) {
+                headerLogo.css('opacity', 0);
+                headerButton.css('opacity', 0);
+                headerLink.css('opacity', 0);
+                headerNumber.css('opacity', 0);
+                headerTel.css('opacity', 0);
+                headerBtnText.css('opacity', 0);
+            }
+            if (opacity > 0.8) {
+                headerLogo.css('opacity', 1);
+                headerButton.css('opacity', 1);
+                headerLink.css('opacity', 1);
+                headerNumber.css('opacity', 1);
+                headerTel.css('opacity', 1);
+                headerBtnText.css('opacity', 1);
+            }
+
+            return null;
+        });
+    }
+
+    if (window.innerWidth <= 767) {
+        window.mySwiper.on('setTranslate', () => {
+            const translate = window.mySwiper.translate;
+            let opacity = 1 + translate / 1500;
+
+            if (opacity < 0.95) {
+                headerLogo.css('opacity', 0);
+                headerBtnText.css('opacity', 0);
+            } else {
+                headerLogo.css('opacity', 1);
+                headerBtnText.css('opacity', 1);
+            }
+        });
+    }
+
+    new jBox('Modal', {
+        attach: '.btn-order',
+        title: 'Оформить заказ',
+        content: $('#modal_to-order'),
         onCreated: function() {
-            var inputName = $("#input-name");
-            var inputTel = $("#input-tel");
-            var inputEmail = $("#input-email");
+            var inputName = $('#input-name');
+            var inputTel = $('#input-tel');
+            var inputEmail = $('#input-email');
             inputName
                 .add(inputTel)
                 .add(inputEmail)
-                .on("input", e => {
+                .on('input', e => {
                     var target = e.target;
                     var value = target && target.value;
 
                     if (value && value.length > 0) {
-                        return $(target).addClass("filled");
+                        return $(target).addClass('filled');
                     }
-                    return $(target).removeClass("filled");
+                    return $(target).removeClass('filled');
                 });
         },
         onClose: function() {
-            $("#success-modal").removeClass("success");
+            $('#success-modal').removeClass('success');
             if (window.mySwiper) {
                 mySwiper.update();
             }
-        }
+        },
     });
-    new jBox("Modal", {
-        attach: ".btn-callback",
-        title: "Заполните форму и мы свяжемся с вами",
+    new jBox('Modal', {
+        attach: '.btn-callback',
+        title: 'Заполните форму и мы свяжемся с вами',
         content:
             '<div class="modal__content"><div class="modal__form"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input type="submit" value="Отправить"></div></div>',
         onCreated: function() {
-            var inputName = $("#input-name");
-            var inputTel = $("#input-tel");
-            inputName.add(inputTel).on("input", e => {
+            var inputName = $('#input-name');
+            var inputTel = $('#input-tel');
+            inputName.add(inputTel).on('input', e => {
                 var target = e.target;
                 var value = target && target.value;
 
                 if (value && value.length > 0) {
-                    return $(target).addClass("filled");
+                    return $(target).addClass('filled');
                 }
-                return $(target).removeClass("filled");
+                return $(target).removeClass('filled');
             });
         },
         onClose: function() {
             if (window.mySwiper) {
                 mySwiper.update();
             }
-        }
+        },
     });
 
     /**
      * Preloader
      */
     try {
-        var decoration = document.getElementById("logo__decoration");
-        var logLink = document.getElementById("logo__link");
-        var preloader = document.getElementById("preloader");
-        var openMenu = document.getElementById("menu-open");
-        var menuEl = document.getElementById("menu");
-        var closeMenu = document.getElementById("menu-close");
+        var decoration = document.getElementById('logo__decoration');
+        var logLink = document.getElementById('logo__link');
+        var preloader = document.getElementById('preloader');
+        var openMenu = document.getElementById('menu-open');
+        var menuEl = document.getElementById('menu');
+        var closeMenu = document.getElementById('menu-close');
         var menuAn = new TimelineMax({ ease: SlowMo.ease.config(0.4, 0.6, false) });
 
-        menuAn.to(menuEl, 1, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
-        openMenu.addEventListener("click", function() {
+        menuAn.to(menuEl, 0, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
+        openMenu.addEventListener('click', function() {
             var that = $(this);
-            if (that.hasClass("active")) {
-                that.removeClass("active");
+            if (that.hasClass('active')) {
+                that.removeClass('active');
                 window.mySwiper.mousewheel.enable();
                 window.mySwiper.allowTouchMove = true;
+                headerLogo.css('opacity', 0);
+
                 return menuAn.to(menuEl, 1, { xPercent: -100, ease: Expo.easeOut });
             }
-            that.addClass("active");
+            that.addClass('active');
             window.mySwiper.allowTouchMove = false;
             window.mySwiper.mousewheel.disable();
+            headerLogo.css('opacity', 1);
             return menuAn.to(menuEl, 1, { xPercent: 0, ease: Expo.easeOut });
         });
 
-        closeMenu.addEventListener("click", function() {
+        closeMenu.addEventListener('click', function() {
             window.mySwiper.mousewheel.enable();
             window.mySwiper.allowTouchMove = true;
             menuAn.to(menuEl, 1, { xPercent: -100, ease: SlowMo.ease.config(0.4, 0.6, false) });
         });
 
-        window.addEventListener("scroll", event => {
+        window.addEventListener('scroll', event => {
             e.preventDefault();
         });
 
@@ -277,26 +337,29 @@ $("ready", () => {
         | MENU LOGIC
         |--------------------------------------------------
         */
-        var menuItems = $(".menu__list li");
-        menuItems.on("click", event => {
+        var menuItems = $('.menu__list li');
+        menuItems.on('click', event => {
             var target = event.currentTarget;
-            $(openMenu).removeClass("active");
+            $(openMenu).removeClass('active');
 
             var index = $(target).index();
             switch (index) {
                 case 0:
-                    mySwiper.slideTo(index, 500);
+                    mySwiper.slideTo(0, 500);
                     return mySwiper.update();
                 case 1:
-                    mySwiper.slideTo(index, 500);
+                    mySwiper.slideTo(1, 500);
                     return mySwiper.update();
                 case 2:
-                    mySwiper.slideTo(4, 500);
+                    mySwiper.slideTo(2, 500);
                     return mySwiper.update();
                 case 3:
-                    mySwiper.slideTo(5, 500);
+                    mySwiper.slideTo(4, 500);
                     return mySwiper.update();
                 case 4:
+                    mySwiper.slideTo(5, 500);
+                    return mySwiper.update();
+                case 5:
                     mySwiper.slideTo(6, 500);
                     return mySwiper.update();
             }
@@ -309,7 +372,7 @@ $("ready", () => {
 
         var onLoaded = function() {
             tpreloader.to(preloader, 1, { css: { scaleX: 0.5, xPercent: 60, opacity: 0 }, onComplete: textAnimation });
-            tpreloader.to(preloader, 0.1, { css: { display: "none" } });
+            tpreloader.to(preloader, 0.1, { css: { display: 'none' } });
         };
         tl.to(decoration, 1, { xPercent: 0 });
         tl.to(decoration, 1, { xPercent: 100 });
@@ -318,13 +381,13 @@ $("ready", () => {
         tl.to(decoration, 1, { scaleX: 1 });
         tl.to(decoration, 1, { xPercent: 0 });
 
-        $("load", () => {
+        $('load', () => {
             tl.to(decoration, 0.3, { css: { xPercent: 0 }, onComplete: onLoaded });
         });
     } catch (err) {
         if (err) {
-            var preloader = document.getElementById("preloader");
-            preloader.style.display = "none";
+            var preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';
         }
     }
     // ============================================================
@@ -334,49 +397,49 @@ $("ready", () => {
     | CARD ANIMATION
     |--------------------------------------------------
     */
-    var card = $(".card");
+    var card = $('.card');
 
     if (winWidth < 768) {
-        card.on("click", event => {
+        card.on('click', event => {
             var target = $(event.currentTarget);
-            $(".card.active")
+            $('.card.active')
                 .not(target)
-                .removeClass("active");
+                .removeClass('active');
 
-            if (!target.hasClass("active")) {
-                var elem = $(event.currentTarget).children(".card__image");
-                var image = elem.children("img");
+            if (!target.hasClass('active')) {
+                var elem = $(event.currentTarget).children('.card__image');
+                var image = elem.children('img');
                 var imageWidth = image.width();
                 TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
-                target.addClass("active");
+                target.addClass('active');
                 mySwiper.update();
             } else {
-                var elem = $(event.currentTarget).children(".card__image");
+                var elem = $(event.currentTarget).children('.card__image');
 
                 TweenLite.to(elem, 0.5, { width: `0px` });
-                target.removeClass("active");
+                target.removeClass('active');
                 mySwiper.update();
             }
         });
     } else {
-        card.on("mouseenter", event => {
+        card.on('mouseenter', event => {
             var target = $(event.currentTarget);
 
-            if (!target.hasClass("active")) {
-                var elem = $(event.currentTarget).children(".card__image");
-                var image = elem.children("img");
+            if (!target.hasClass('active')) {
+                var elem = $(event.currentTarget).children('.card__image');
+                var image = elem.children('img');
                 var imageWidth = image.width();
 
                 TweenLite.to(elem, 0.5, { width: `${imageWidth}px` });
-                target.addClass("active");
+                target.addClass('active');
                 mySwiper.update();
             }
         });
 
-        card.on("mouseleave", event => {
+        card.on('mouseleave', event => {
             var target = $(event.currentTarget);
-            target.removeClass("active");
-            var elem = $(event.currentTarget).children(".card__image");
+            target.removeClass('active');
+            var elem = $(event.currentTarget).children('.card__image');
 
             TweenLite.to(elem, 0.5, { width: `0px` });
             mySwiper.update();
@@ -388,27 +451,27 @@ $("ready", () => {
         | FORM INPUTS
         |--------------------------------------------------
         */
-        var inputName = $("#input-name");
-        var inputTel = $("#input-tel");
-        var inputEmail = $("#input-email");
+        var inputName = $('#input-name');
+        var inputTel = $('#input-tel');
+        var inputEmail = $('#input-email');
         // ============================================================
 
-        var button_inc = $(".buttons__button-inc");
-        var button_dec = $(".buttons__button-dec");
-        var priceCounter = $("#order-count");
-        var totalPrice = $(".form-calculator__total-price .price__value");
-        var submitButton = $("#to_order-button");
+        var button_inc = $('.buttons__button-inc');
+        var button_dec = $('.buttons__button-dec');
+        var priceCounter = $('#order-count');
+        var totalPrice = $('.form-calculator__total-price .price__value');
+        var submitButton = $('#to_order-button');
         var isSending = false;
         var pricePerOnce = 1200;
         priceCounterValue = parseInt(priceCounter.text());
         totalPrice.text(pricePerOnce * priceCounterValue);
 
-        submitButton.on("submit", function(e) {
+        submitButton.on('submit', function(e) {
             e.preventDefault();
         });
 
-        submitButton.on("click", function(e) {
-            console.log("work 2");
+        submitButton.on('click', function(e) {
+            console.log('work 2');
 
             isSending = true;
             var formData = {
@@ -416,27 +479,27 @@ $("ready", () => {
                 phone: inputTel.val(),
                 email: inputEmail.val(),
                 value: priceCounter.text(),
-                totalPrice: totalPrice.text()
+                totalPrice: totalPrice.text(),
             };
             $.ajax({
-                type: "POST",
-                url: "./sendEmail.php",
+                type: 'POST',
+                url: './sendEmail.php',
                 data: formData,
                 success: function() {
-                    $("#success-modal").addClass("success");
-                    console.log("Success");
-                    var element = document.querySelector("#success-modal");
+                    $('#success-modal').addClass('success');
+                    console.log('Success');
+                    var element = document.querySelector('#success-modal');
 
                     successEmail(element);
                 },
                 error: function() {
-                    console.log("Error");
-                    $("#modal-form").addClass("error");
-                }
+                    console.log('Error');
+                    $('#modal-form').addClass('error');
+                },
             });
         });
 
-        button_dec.on("click", () => {
+        button_dec.on('click', () => {
             priceCounterValue = parseInt(priceCounter.text());
             if (priceCounterValue === 0) {
                 return false;
@@ -444,7 +507,7 @@ $("ready", () => {
             totalPrice.text(pricePerOnce * (priceCounterValue - 1));
             return priceCounter.text(--priceCounterValue);
         });
-        button_inc.on("click", () => {
+        button_inc.on('click', () => {
             priceCounterValue = parseInt(priceCounter.text());
             if (priceCounterValue === 9999) {
                 return false;
@@ -458,10 +521,10 @@ $("ready", () => {
     var successEmail = function(el) {
         return lottie.loadAnimation({
             container: el, // the dom element that will contain the animation
-            renderer: "svg",
+            renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: "./images/check_animation.json" // the path to the animation json
+            path: './images/check_animation.json', // the path to the animation json
         });
     };
 });

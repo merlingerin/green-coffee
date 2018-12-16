@@ -114,6 +114,11 @@
                 margin-bottom: 15%;
             }
         }
+        .button--transparent {
+            padding: sizeTb(26) sizeTb(140);
+            font-size: sizeTb(18);
+            border-bottom: 1px solid transparent;
+        }
         .button__to-order {
             // max-width: sizeTb(320);
             max-width: none;

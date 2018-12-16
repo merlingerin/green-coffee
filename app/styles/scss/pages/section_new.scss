@@ -6,7 +6,7 @@
     width: 120vw;
     max-width: 120vw;
     padding: 0 0 0 20vw;
-    background: $color_darkgreen url("../images/section_new-bg@x2.png") center right/contain no-repeat;
+    background: $color_darkgreen url('../images/section_new-bg@x2.png') center right/contain no-repeat;
     &__title {
         position: relative;
         transform: translateY(30vh);
@@ -181,5 +181,9 @@
         &:nth-child(1) {
             margin-left: 4vw;
         }
+    }
+    .clinical-refs__list {
+        list-style: none;
+        list-style-type: none;
     }
 }

@@ -48,9 +48,16 @@
             color: #ffffff;
         }
     }
+    .button--transparent {
+        min-width: 200px;
+        max-width: 300px;
+        padding: size(26) size(90);
+        margin-top: 3vh;
+    }
     .button__to-order {
         // max-width: size(336);
-        max-width: none;
+        min-width: 200px;
+        max-width: 300px;
         max-height: size(75);
         line-height: size(24);
         font-size: size(18);

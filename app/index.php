@@ -18,21 +18,37 @@
             crossorigin="anonymous"
         />
 
-        <link rel="stylesheet" href="styles/swiper.css">
-        <link rel="stylesheet" href="styles/styles.css" />
-        <link rel="stylesheet" href="scripts/jbox/jBox.min.css" />
+        <link rel="stylesheet" href="./styles/swiper.css">
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="./scripts/jbox/jBox.min.css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-        <script src="scripts/swiper/swiper.min.js"></script>
+        <script src="./scripts/swiper/swiper.min.js"></script>
 
-        <script src="scripts/jbox/jBox.min.js"></script>
+        <script src="./scripts/jbox/jBox.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     </head>
+    <?php
+    if ($_GET['utm_source']=='google' && $_GET['utm_medium']=='cpc' &&
+    $_GET['utm_campaign']=='aud1')
+    {
+             $tel='0800-GOOGLE-CO.';
+    }
+    elseif ($_GET['utm_source']=='facebook' && $_GET['utm_medium']=='cpc' &&
+    $_GET['utm_campaign']=='aud2')
+    {
+             $tel='0800-FACEBOOK-CO.';
+    }
+    else
+    {
+             $tel='0800-STANDART-NUMBER.';
+    }
 
+    ?>
     <body>
               <!-- Google Tag Manager -->
 
@@ -68,28 +84,28 @@
                 <div id="menu" class="menu">
                     <div class="menu__header">
                         <div class="logo">
-                            <a href="/" class="logo__link"></a>
+                            <a href="/green-coffee-polyphenol" class="logo__link"></a>
                             <span class="logo__text">Healthy Nutrition</span>
                         </div>
                     </div>
                     <div id="menu-close" class="menu__content">
                         <ul class="menu__list">
-                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ГЛАВНАЯ</a></li>
+                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ГОЛОВНА</a></li>
                             <li class="list__item"><a class="title_2" href="javascript:void(0)">GREEN COFFEE POLYPHENOL</a></li>
-                            <li class="list__item"><a class="title_2" href="javascript:void(0)">КЛИНИЧЕСКИЕ ИСПЫТАНИЯ</a></li>
-                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ОСНОВНЫЕ ОСОБЕННОСТИ</a></li>
-                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ЗАДАТЬ ВОПРОС</a></li>
-                            <li class="list__item"><a class="title_2" href="javascript:void(0)">КОНТАКТЫ</a></li>
+                            <li class="list__item"><a class="title_2" href="javascript:void(0)">КЛІНІЧНІ ВИПРОБУВАННЯ</a></li>
+                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ГОЛОВНІ ОСОБЛИВОСТІ</a></li>
+                            <li class="list__item"><a class="title_2" href="javascript:void(0)">ЗАДАТИ ПИТАННЯ</a></li>
+                            <li class="list__item"><a class="title_2" href="javascript:void(0)">КОНТАКТИ</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="logo">
-                    <a href="/" class="logo__link"></a>
+                <div id="logo" class="logo">
+                    <a href="/green-coffee-polyphenol" class="logo__link"></a>
                     <span class="logo__text">Healthy Nutrition</span>
                 </div>
-                <a href="#" class="button  button__to-order btn-order button--green"><span class="button__text">заказать</span></a>
-                <a href="#" class="facebook-link"><i class="facebook-link__icon fab fa-facebook-f"></i></a>
-                <a href="tel:+380445375280" class="tel-number"><span class="tel-number__text">0 800 60 77 87</span></a>
+                <a href="#" class="button  button__to-order btn-order button--green"><span class="button__text">замовити</span></a>
+                <a href="https://www.facebook.com/tobeplus.com.ua" target="_blank" title="facebook" class="facebook-link"><i class="facebook-link__icon fab fa-facebook-f"></i></a>
+                <?php echo'<a href="tel:' .  $tel . '" class="tel-number"><span class="tel-number__text">' . $tel . '</span></a>' ?>
 
                 <div id="menu-open" class="menu-button">
                     <span class="menu-button__text">Menu</span>
@@ -99,9 +115,8 @@
                         <i class="burger-button__item"></i>
                     </div>
                 </div>
+                <div class="languages"><a href="/green-coffee-polyphenol" title="ua" class="lang">УКР</a><a href="/green-coffee-polyphenol/ru" title="ru" class="lang">РУС</a></div>
             </div>
-
-
         <div id="body-swiper" class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -119,12 +134,12 @@
                                 </div>
                                 <div id="menu-close" class="menu__content">
                                     <ul class="menu__list">
-                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ГЛАВНАЯ</a></li>
+                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ГОЛОВНА</a></li>
                                         <li class="list__item"><a class="title_2" href="javascript:void(0)">GREEN COFFEE POLYPHENOL</a></li>
-                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">КЛИНИЧЕСКИЕ ИСПЫТАНИЯ</a></li>
-                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ОСНОВНЫЕ ОСОБЕННОСТИ</a></li>
-                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ЗАДАТЬ ВОПРОС</a></li>
-                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">КОНТАКТЫ</a></li>
+                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">КЛІНІЧНІ ВИПРОБУВАННЯ</a></li>
+                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ГОЛОВНІ ОСОБЛИВОСТІ</a></li>
+                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">ЗАДАТИ ПИТАННЯ</a></li>
+                                        <li class="list__item"><a class="title_2" href="javascript:void(0)">КОНТАКТИ</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -132,7 +147,7 @@
                                 <a href="/" class="logo__link"></a>
                                 <span class="logo__text">Healthy Nutrition</span>
                             </div>
-                            <a href="#" class="button  button__to-order btn-order button--green"><span class="button__text">заказать</span></a>
+                            <a href="#" class="button  button__to-order btn-order button--green"><span class="button__text">замовити</span></a>
                             <a href="#" class="facebook-link"><i class="facebook-link__icon fab fa-facebook-f"></i></a>
                             <a href="tel:+380445375280" class="tel-number"><span class="tel-number__text">0 800 60 77 87</span></a>
 
@@ -147,9 +162,9 @@
                         </div> -->
                         <div class="hero">
                             <h1 id="hero-title" class="hero__title title_1 ">
-                                <span class="ml12">почувствуйте</span><br />
-                                <span class="ml12">легкость</span><br />
-                                <p class="title_3 ml12"><span class="ml12">Программа снижения веса </span><br /><span class="ml12">с активными антиоксидантами</span></span></p>
+                                <span class="ml12">ВІДЧУЙТЕ</span><br />
+                                <span class="ml12">ЛЕГКІСТЬ</span><br />
+                                <p class="title_3 ml12"><span class="ml12">Програма зниження ваги </span><br /><span class="ml12">з активними антиоксидантами</span></span></p>
                             </h1>
                             <div class="scroll-page">
                                 <span class="scroll-text">SCROLL</span>
@@ -163,20 +178,25 @@
                                 >
                                     <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
                                 </svg>
+                                <!--
+                                    <span class="scroll-icon"
+                                        >
+                                    </span>
+                                -->
                             </div>
                         </div>
                         <div class="sidebar">
                             <div class="card card--1">
                                 <p class="card__number">01</p>
-                                <p class="card__description paragraph_2">Клинически тестированный результат</p>
+                                <p class="card__description paragraph_2">Клінічно досліджений результат</p>
                             </div>
                             <div class="card card--2">
                                 <p class="card__number">02</p>
-                                <p class="card__description paragraph_2">Натуральный экстракт зеленого кофе</p>
+                                <p class="card__description paragraph_2">Натуральний екстракт зеленої кави</p>
                             </div>
                             <div class="card card--3">
                                 <p class="card__number">03</p>
-                                <p class="card__description paragraph_2">Антиоксидантная антиэйджинг-профилактика</p>
+                                <p class="card__description paragraph_2">Антиоксидантна антиейджинг профілактика</p>
                             </div>
                             <i class="image--bottle" ></i>
                         </div>
@@ -192,13 +212,13 @@
                                 <span class="ml12">Polyphenol</span>
                             </h2>
                             <p class="section_2__paragraph paragraph_1">
-                                Содержит уникальный природный комплекс антиоксидантов. Контролирует усвоение глюкозы, нормализует обмен веществ
+                                Містить унікальний природний комплекс антиоксидантів. Контролює засвоєння глюкози, нормалізує обмін речовин.
                             </p>
                             <i class="section_2__decor"></i>
                         </div>
                         <div class="section_2__right-side">
-                            <span class="description description--top note">Высвобождение глюкозы в печени</span>
-                            <span class="description description--bottom note">Сниженое поглащение глюкозы в кишечнике</span>
+                            <span class="description description--top note">Вивільнення глюкози в печінці</span>
+                            <span class="description description--bottom note">Знижене поглинання глюкози в кишечнику</span>
                             <i class="section_2__image image-man">
                                 <i class="image-man-top"></i><i class="image-man-bottom"></i>
                                 <span class="text-line text-line-1"></span><span class="text-line text-line-2"></span>
@@ -209,8 +229,8 @@
                             </i>
                         </div>
                         <div class="section_2__footer">
-                            <span class="footer__description" data-tilt>Высвобождение глюкозы в печени</span>
-                            <span class="footer__description">Сниженное поглощение глюкозы в кишечнике</span>
+                            <span class="footer__description" data-tilt>Вивільнення глюкози в печінці</span>
+                            <span class="footer__description">Знижене поглинання глюкози в кишечнику</span>
                         </div>
                     </div>
                 </section>
@@ -219,9 +239,8 @@
                         <!-- <div class="swiper-slide sidebar--green"></div> -->
 
                         <p class="section_new__title title_2 text-decor--rotated">
-                                <!-- <span class="ml12">Результаты </span><br> -->
-                                <span class="ml12">Клинические </span><br>
-                                <span class="ml12">испытаний</span>
+                                <span class="ml12">КЛІНІЧНІ </span><br>
+                                <span class="ml12">ВИПРОБУВАННЯ</span>
                             </p>
                     <div id="swiper-statistics" class="swiper-container">
                         <!-- Additional required wrapper -->
@@ -229,11 +248,11 @@
                             <section class=" swiper-slide slide_1">
                                     <div class="swiper-slide__description">
                                         <p class="swiper-slide__paragraph paragraph_1">
-                                                <span class="paragraph_1--bold">5,7% потери веса</span><br>
-                                                В рандомизированном, двойном слепом, параллельном исследовании, проведенном с 50 людьми, участники потеряли в среднем 11 фунтов ( 5 килограммов) в течении 2 месяцев
+                                                <span class="paragraph_1--bold">5,7% втрати ваги</span><br>
+                                                У рандомізованому подвійному сліпому паралельному дослідженні, проведеному з 50 людьми, учасники втратили в середньому 11 футів (5 кілограмів) протягом 2 місяців
                                         </p>
                                         <p class="disclaimer">
-                                                Через 60 дней в группе Svetol наблюдалось значительное снижение веса 4,97 ± 0,32 кг (-5,7%) по сравнению с контрольной группой  Placebo  2,45 ± 0,37 кг (-2,9 %).
+                                                Через 60 днів у групі Svetol спостерігалося значне зниження ваги 4,97 ± 0,32 кг (-5,7%) у порівнянні з контрольною групою Placebo 2,45 ± 0,37 кг (-2,9%).
                                         </p>
                                     </div>
                                     <div class="swiper-slide__graphic ">
@@ -252,10 +271,10 @@
                             <section class=" swiper-slide slide_2">
                                     <div class="swiper-slide__description">
                                         <p class="swiper-slide__paragraph paragraph_1 ">
-                                        <span class="paragraph_1--bold">10% Уменьшения индекса массы тела.</span><br> Клинические исследования демонстрируют снижение в течении 2 месяцев индекса массы тела (ИМТ)  до 10% ( на 1,9 кг/м2)
+                                        <span class="paragraph_1--bold">10% Зменшення індексу маси тіла.</span><br> Клінічні дослідження демонструють зниження протягом 2 місяців індексу маси тіла (ІМТ) до 10% (на 1,9 кг/м2)
                                         </p>
                                         <p class="disclaimer">
-                                                Уменьшение (ИМТ) группы Svetol по сравнению с группой Placebo составило: -1,9±0,1 кг/м2 против -0.9±0,1 кг/м2 соответственно (Р<0,001).
+                                            Зменшення (ІМТ) групи Svetol в порівнянні з групою Placebo склало: -1,9 ± 0,1 кг / м2 проти -0.9 ± 0,1 кг / м2 відповідно (Р <0,001).
                                         </p>
                                     </div>
                                     <div class="swiper-slide__graphic">
@@ -265,20 +284,20 @@
                                                 <i class="graphic__stick"></i>
                                             </div>
                                             <div class="graphic graphic--2 graphic_41">
-                                                    <span class="graphic__title">GREEN COFFEE<br />POLYPHENOL<br />(SVETOL®)</span>
-                                                    <i class="graphic__elips"><span class="graphic__value">-1,9 <br>кг/м2</span></i>
-                                                    <i class="graphic__stick"></i>
+                                                <span class="graphic__title">GREEN COFFEE<br />POLYPHENOL<br />(SVETOL®)</span>
+                                                <i class="graphic__elips"><span class="graphic__value">-1,9 <br>кг/м2</span></i>
+                                                <i class="graphic__stick"></i>
                                             </div>
                                         </div>
                             </section>
                             <section class=" swiper-slide slide_3">
                                     <div class="swiper-slide__description">
                                         <p class="swiper-slide__paragraph paragraph_1 ">
-                                            <span class="paragraph_1--bold">Регуляция глюкозы.</span><br>
-                                            Экспериментальное исследование показывает влияние Svetol на снижение  уровня сахара в крови.
+                                            <span class="paragraph_1--bold">Регуляція глюкози.</span><br>
+                                            Експериментальне дослідження показує вплив Svetol на зниження рівня цукру в крові.
                                         </p>
                                         <p class="disclaimer">
-                                                Результаты показали значительное снижение уровня сахара в крови после нагрузки, в группе Placebo и у людей принимавших Svetol® (147,8 ± 9,3 против 133 ± 8,7 мг/дл, ( p <0,05).
+                                            Результати показали значне зниження рівня цукру в крові після навантаження, в групі Placebo і у людей, що приймали Svetol® (147,8 ± 9,3 проти 133 ± 8,7 мг / дл, (p <0,05).
                                         </p>
                                     </div>
                                     <div class="swiper-slide__graphic">
@@ -297,9 +316,9 @@
                             <section class=" swiper-slide slide_4">
                                     <div class="swiper-slide__description">
                                         <p class="swiper-slide__paragraph paragraph_1 ">
-                                        <span class="paragraph_1--bold">Эффект сжигания жиров: +4% мышечная масса / жировая масса.</span><br> Исследования демонстрируют преимущества  Svetol® по снижению  жировой массы. Клинические исследования показывают, что  Svetol® является эффективным решением для снижения веса. При этом, вы не теряете воду или мышцы, но теряете жир.</p>
+                                        <span class="paragraph_1--bold">Ефект спалювання жирів: + 4% м'язова маса / жирова маса.</span><br> Дослідження показують переваги Svetol® по зниженню жирової маси. Клінічні дослідження показують, що Svetol® є ефективним рішенням для зниження ваги. При цьому, ви не втрачаєте воду або м'язи, але втрачаєте жир.</p>
                                         <p class="disclaimer">
-                                            Значительно увеличено соотношение мышечной массы к жировой массе в группе Svetol® - на  +4,1± 0,7% по сравнению с Placebo на +1,6± 0,6%  (p = 0,01).
+                                            Значно збільшено співвідношення м'язової маси до жирової маси в групі Svetol® - на + 4,1 ± 0,7% в порівнянні з Placebo на + 1,6 ± 0,6% (p = 0,01).
                                         </p>
                                     </div>
                                     <div class="swiper-slide__graphic ">
@@ -315,13 +334,29 @@
                                             </div>
                                         </div>
                             </section>
+                            <section class=" swiper-slide slide_5">
+                                <div class="swiper-slide__description">
+                                    <p class="swiper-slide__paragraph paragraph_1 ">
+                                        <span class="paragraph_1--bold">Бібліографічні посилання:</span>
+                                        <ul class="clinical-refs__list swiper-slide__paragraph">
+                                            <li class="clinical-ref">- van Dam et al., 2006</li>
+                                            <li class="clinical-ref">- Blum et al., 2007</li>
+                                            <li class="clinical-ref">- Dellalibera et al., 2006</li>
+                                            <li class="clinical-ref">- Henry-Vitrac et al., 2010</li>
+                                            <li class="clinical-ref">- Nardon et al., 2007</li>
+                                            <li class="clinical-ref">- Farah et al., 2008</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+                        </section>
                         </div>
                     </div>
                     <div class="section_new__slider navigation slider-navigation">
                         <div class="slider-navigation__wrapper">
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next swiper-button-white"></div>
-                                <div class="swiper-button-prev swiper-button-white"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
                         </div>
                     </div>
                 </section>
@@ -332,14 +367,12 @@
                         <div class="hero">
                             <p class="section_3__title hero__brand-text title_3"><span class="ml12">Green Coffee Polyphenol</span></p>
                             <h2 class="section_3__paragraph hero__title title_2">
-                                <span class="ml12">Здоровый способ </span><br />
-                                <span class="ml12">управления весом</span>
+                                <span class="ml12">ЗДОРОВИЙ СПОСІБ </span><br />
+                                <span class="ml12">УПРАВЛІННЯ ВАГОЮ</span>
                             </h2>
-                            <a href="#" class="button button__to-order button--green"><span class="button__text">скачать брошюру</span></a>
-                            <a href="#" class="button button--price button button__to-order button--green btn-order"><span class="button__text">ЗАКАЗАТЬ</span></a>
-                            <p class="section_3__disclaimer disclaimer">Эффективность препарата индивидуальна, и зависит от особенностей
-                                организма и стиля жизни. В среднем люди, принимающие препарат
-                                теряют 3-5 кг веса за 2х-месячный курс </p>
+                            <a href="./docs/GC-UA.pdf" download class="button button__to-order button--green"><span class="button__text">СКАЧАТИ БРОШУРУ</span></a>
+                            <a href="#" class="button button--price button button__to-order-- button--transparent btn-order"><span class="button__text">ЗАМОВИТИ</span></a>
+                            <p class="section_3__disclaimer disclaimer">Ефективність препарату індивідуальна, і залежить від особливостей організму і стилю життя. В середньому люди, що приймають препарат втрачають 3-5 кг ваги за 2х-місячний курс </p>
                         </div>
                     </div>
                 </section>
@@ -357,59 +390,57 @@
                             <div class="card card-1">
                                 <div class="card__card-content card-content">
                                     <i class="card-content__card-number paragraph_2">01</i>
-                                    <p class="card-content__card-title title_3">Коррекция обмена веществ</p>
+                                    <p class="card-content__card-title title_3">КОРЕКЦІЯ ОБМІНУ РЕЧОВИН</p>
                                     <p class="card-content__card-description paragraph_3">
-                                        Зеленый кофе - рекордсмен по содержанию хлорогеновой кислоты. Это мощный антиоксидант растительного
-                                        происхождения, который «перенастраивает» наш организм на сжигание, а не запасание жиров.
+                                        Зелена кава - рекордсмен за змістом хлорогенової кислоти. Це потужний актиоксидант рослинного походження, який «переналаштовує» наш організм на спалювання, а не запасання жирів.
                                     </p>
                                     <i class="card-content__card-arrow icon-right-open"></i>
                                 </div>
-                                <div class="card__image"><img src="images/section_4/1.png" alt="" /></div>
+                                <div class="card__image"><img src="./images/section_4/1.png" alt="" /></div>
                             </div>
                             <div class="card card-2">
                                 <div class="card__card-content card-content">
                                     <i class="card-content__card-number paragraph_2">02</i>
-                                    <p class="card-content__card-title title_3">Клинически подтвержденная польза</p>
+                                    <p class="card-content__card-title title_3">Клінічно підтверджена користь</p>
                                     <p class="card-content__card-description paragraph_3">
-                                        9 научных исследований влияния экстракта зеленого кофе Svetol®, проведенных в Европе, подтверждают его позитивное влияние на коррекцию веса.
+                                        9 наукових досліджень впливу екстракту зеленої кави Svetol®, проведених в Європі, підтверджують його позитивний вплив на корекцію ваги.
                                     </p>
                                     <i class="card-content__card-arrow icon-right-open"></i>
                                 </div>
-                                <div class="card__image"><img src="images/section_4/2.png" alt="" /></div>
+                                <div class="card__image"><img src="./images/section_4/2.png" alt="" /></div>
                             </div>
                             <div class="card card-3">
                                 <div class="card__card-content card-content">
                                     <i class="card-content__card-number paragraph_2">03</i>
-                                    <p class="card-content__card-title title_3">Простая программа без диеты</p>
+                                    <p class="card-content__card-title title_3">ПРОСТА ПРОГРАМА БЕЗ ДІЄТИ</p>
                                     <p class="card-content__card-description paragraph_3">
-                                        Ежедневный двухразовый приём препарата в течении 2-х месяцев помогает снижать вес не меняя стиля жизни и привычек питания
+                                        Щоденний дворазовий прийом препарату протягом 2-х місяців допомагає знижувати вагу не змінюючи стилю життя і звичок харчування
                                     </p>
                                     <i class="card-content__card-arrow icon-right-open"></i>
                                 </div>
-                                <div class="card__image"><img src="images/section_4/3.png" alt="" /></div>
+                                <div class="card__image"><img src="./images/section_4/3.png" alt="" /></div>
                             </div>
                             <div class="card card-4">
                                 <div class="card__card-content card-content">
                                     <i class="card-content__card-number paragraph_2">04</i>
-                                    <p class="card-content__card-title title_3">Антиэджинг эффект антиоксидантов</p>
+                                    <p class="card-content__card-title title_3">АНТІЕЙДЖИНГ ЕФЕКТ АНТИОКСИДАНТІВ</p>
                                     <p class="card-content__card-description paragraph_3">
-                                        В не обжаренных кофейных зернах содержится более двух тысяч антиоксидантов, которые помогают расщеплять жиры
-                                        перерабатывать жирные кислоты, ускоряют обмен веществ, связывают свободные радикалы и имееют антиэйджинг эффект.
+                                        В необсмажених кавових зернах міститься понад дві тисячі антиоксидантів, які допомагають розщеплювати жири, переробляти жирні кислоти, прискорюють обмін речовин, пов'язують вільні радикали і мають антиейджинг ефект.
                                     </p>
                                     <i class="card-content__card-arrow icon-right-open"></i>
                                 </div>
-                                <div class="card__image"><img src="images/section_4/4.png" alt="" /></div>
+                                <div class="card__image"><img src="./images/section_4/4.png" alt="" /></div>
                             </div>
                             <div class="card card-5">
                                 <div class="card__card-content card-content">
                                     <i class="card-content__card-number paragraph_2">05</i>
-                                    <p class="card-content__card-title title_3">Безопасное управление весом</p>
+                                    <p class="card-content__card-title title_3">БЕЗПЕЧНЕ УПРАВЛІННЯ ВАГОЮ</p>
                                     <p class="card-content__card-description paragraph_3">
-                                        В производстве используется декофеинизированное зерно, поэтому Green Coffee Polyphenol не вызывает побочных эффектов в виде повышенного давления, учащенного сердечного ритма и возбуждённости.
+                                        У виробництві використовується декофеїнізоване зерно, тому Green Coffee Polyphenol не викликає побічних ефектів у вигляді підвищеного тиску, прискореного серцевого ритму і збудженості.
                                     </p>
                                     <i class="card-content__card-arrow icon-right-open"></i>
                                 </div>
-                                <div class="card__image"><img src="images/section_4/5.png" alt="" /></div>
+                                <div class="card__image"><img src="./images/section_4/5.png" alt="" /></div>
                             </div>
                         </div>
                     </div>
@@ -420,13 +451,13 @@
                     <div class="container">
                         <div class="hero">
                             <h3 class="section_5__paragraph hero__title title_2  text-decor--rotated decorator-3">
-                                <span class="ml12">ЗАДАТЬ ЛЮБОЙ ВОПРОС</span><br />
-                                <span class="ml12">ОБ ИННОВАЦИОННОМ ПРОДУКТЕ</span><br />
-                                <span class="ml12">МОЖНО ПРЯМО СЕЙЧАС</span>
+                                <span class="ml12">ЗАДАТИ БУДЬ-ЯКЕ ПИТАННЯ</span><br />
+                                <span class="ml12">ПО ІННОВАЦІЙНОМУ ПРОДУКТУ</span><br />
+                                <span class="ml12">МОЖНА ПРЯМО ЗАРАЗ</span>
                             </h3>
                             <div class="button-container">
-                                <a href="#" class="button__to-order btn-order button--green button"><span class="button__text">купить</span></a>
-                                <a href="#" class="button__price button--transparent btn-callback">Уточнить цену и дозировки</a>
+                                <a href="#" class="button__to-order btn-order button--green button"><span class="button__text">КУПИТИ</span></a>
+                                <a href="#" class="button__price button--transparent btn-callback">УТОЧНИТИ ЦІНУ І ДОЗУВАННЯ</a>
                             </div>
                         </div>
                     </div>
@@ -434,11 +465,11 @@
                 <!-- Section #6 -->
                 <div class="swiper-slide section_6 sidebar--green section-contacts">
                     <div class="logo">
-                        <a href="/" class="logo__link"></a> <span class="logo__text paragraph_2">Healthy </span>
+                        <a href="/" class="logo__link"></a> <span class="logo__text paragraph_2">Healthy Nutrition</span>
                     </div>
                     <ul class="contacts">
                         <li class="contacts__item">
-                            <h5 class="contacts__title title_3">Наш адрес:</h5>
+                            <h5 class="contacts__title title_3">Наша адреса:</h5>
                             <p class="contacts__description paragraph_2">г. Киев ул. Липинского 3</p>
                         </li>
                         <li class="contacts__item">
@@ -446,13 +477,13 @@
                             <a href="tel:+380445375280" class="contacts__description paragraph_2">0 800 60 77 87</a>
                         </li>
                         <li class="contacts__item">
-                            <h5 class="contacts__title title_3">email:</h5>
+                            <h5 class="contacts__title title_3">Еmail:</h5>
                             <a href="email:tobeplus@gmail.com" class="contacts__description paragraph_2">nutrition@tobeplus.com.ua</a>
                         </li>
                     </ul>
                 </div>
                 <!-- Section #7 -->
-                <div id="section-map" class="swiper-slide section_7 "><img src="images/map/map-1.png" alt="" /></div>
+                <div id="section-map" class="swiper-slide section_7 "><img src="./images/map/map-1.png" alt="" /></div>
             </div>
         </div>
         <!-- <div style="display: none;" id="modal_callback" class="modal__content">
@@ -481,7 +512,7 @@
                                 </div>
                                 <div class="form-calculator__total-price">
                                     <span class="price__title">
-                                        Итого:
+                                        Загалом:
                                     </span>
                                     <span class="price__value paragraph_1">
                                         1200
@@ -491,16 +522,16 @@
                             </div>
                         </div>
                 <div id="modal-form" class="modal__form">
-                    <input type="text" id="input-name" name="name" placeholder="Имя">
+                    <input type="text" id="input-name" name="name" placeholder="Им'я">
                     <input type="email" id="input-email" name="email" placeholder="Email">
                     <input type="tel" id="input-tel" name="tel" placeholder="Телефон">
-                    <input id="to_order-button" type="submit" value="Оформить">
+                    <input id="to_order-button" type="submit" value="Оформити">
                     <div id="success-modal"></div>
                 </div>
             </div>
-        <script src="scripts/tilt.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/app.js"></script>
+        <script src="./scripts/tilt.js"></script>
+        <script src="./scripts/main.js"></script>
+        <script src="./scripts/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.js"></script>
     </body>
 </html>

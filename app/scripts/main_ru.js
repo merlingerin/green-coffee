@@ -244,7 +244,7 @@ $('ready', () => {
 
     new jBox('Modal', {
         attach: '.btn-order',
-        title: 'Оформити замовлення',
+        title: 'Оформить заказ',
         content: $('#modal_to-order'),
         onCreated: function() {
             var inputName = $('#input-name');
@@ -272,9 +272,9 @@ $('ready', () => {
     });
     new jBox('Modal', {
         attach: '.btn-callback',
-        title: "Заповнiть форму i ми зв'яжемося з Вами",
+        title: 'Заполните форму и мы свяжемся с вами',
         content:
-            '<div class="modal__content"><div class="modal__form"><input type="text" id="input-name" name="name" placeholder="Им\'я"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input id="to_order-button" type="submit" value="Надiслати"></div></div>',
+            '<div class="modal__content"><div class="modal__form"><input type="text" id="input-name" name="name" placeholder="Имя"><input type="tel" id="input-tel" name="tel" placeholder="Телефон"><input id="to_order-button" type="submit" value="Отправить"></div></div>',
         onCreated: function() {
             var inputName = $('#input-name');
             var inputTel = $('#input-tel');
